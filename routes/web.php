@@ -16,12 +16,16 @@ use App\Http\Controllers;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+     return view('auth.login');
 });
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
+Route::middleware(['auth:sanctum', 'verified'])->get('/home', function () {
+    return view('club.index');
 
-})->name('dashboard');
+})->name('home');
 
- Route::get('admin', [Controllers\AdminController::class, 'index'])->name('index');
+ Route::get('/vote', [Controllers\VoteController::class, 'index'])->name('index');
+
+ Route::get('/user', [Controllers\UserController::class, 'index'])->name('index');
+
+ Route::get('/proposal', [Controllers\ProposalController::class, 'index'])->name('index');
