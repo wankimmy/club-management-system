@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
+use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
@@ -18,8 +20,8 @@ class UserController extends Controller
 
     public function index()
     {
-
-    return view('user.index');
+        $User = User::get();
+        return view('user.index',compact('User'));
     }
 
     /**
@@ -29,7 +31,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        return view('user.create');
     }
 
     /**
@@ -40,7 +42,25 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
+        $request->validate([
+        'name'=>'required',
+        'email'=> 'required',
+        'password' => 'required',
+        'role' => 'required'
+        ]);
+    
+         $User = new User([
+        'name' => $request->get('name'),
+        'email'=> $request->get('email'),
+        'password'=>  Hash::make($request->get('password')),
+        'user_type'=> $request->get('role'),
+        ]);
+
+       $User->save();
+       toastr()->success('User has been added successfully!');
+       
+       return redirect('/user');
     }
 
     /**
@@ -51,7 +71,8 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        //
+        $User = User::where('id', $id)->first();
+        return view('user.show',compact('User'));
     }
 
     /**
@@ -62,7 +83,9 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        //
+        $User = User::find($id);
+
+        return view('user.edit', compact('User'));
     }
 
     /**
@@ -72,9 +95,23 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+      $user_id = $request->input('user_id');
+      $name = $request->input('name');
+      $email = $request->input('email');
+      $password = $request->input('password');
+      $role = $request->input('role');
+
+       User::where('id', $user_id)->update([
+            'name' => $name,
+            'email' => $email,
+            // 'password' => Hash::make($password),
+            'user_type' => $role,
+       ]);
+
+       toastr()->success('User has been updated successfully!');
+      return redirect('/user');
     }
 
     /**
@@ -85,6 +122,10 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //
+     $User = User::find($id);
+     $User->delete();
+
+      toastr()->success('User has been deleted successfully!');
+      return redirect('/user');
     }
 }

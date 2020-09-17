@@ -11,14 +11,16 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
   <title>Club Management System</title>
-
   <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="{{ asset('plugins/fontawesome-free/css/all.min.css')}}">
   <!-- Theme style -->
-  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="{{ asset('dist/css/adminlte.min.css')}}">
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
-  <link rel="icon" href="dist/img/logo.png" type="image/png" sizes="16x16">
+  <link rel="icon" href="{{ asset('dist/img/logo.png')}}" type="image/png" sizes="16x16">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.5/css/responsive.dataTables.min.css">
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
@@ -89,7 +91,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="index3.html" class="brand-link">
-      <img src="dist/img/logo.png" alt="Unikl Logo" class="brand-image img-circle elevation-3"
+      <img src="{{ asset('dist/img/logo.png') }}" alt="Unikl Logo" class="brand-image img-circle elevation-3"
            style="opacity: .8">
       <span class="brand-text font-weight-light">Club Management</span>
     </a>
@@ -99,7 +101,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="dist/img/user3-128x128.jpg" class="img-circle elevation-2" alt="User Image">
+          <img src="{{ asset('dist/img/user3-128x128.jpg') }}" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
           <a href="#" class="d-block">{{ Auth::user()->name }}</a>
@@ -113,25 +115,25 @@ scratch. This page gets rid of all links and provides the needed markup only.
                with font-awesome or any other icon font library -->
               <li class="nav-item">
                 <a href="{{ url('/home') }}" class="nav-link {{ Request::is('home') ? 'active' : '' }}">
-                  <i class="far fa-circle nav-icon"></i>
+                  <i class="fas fa-dumbbell nav-icon text-white"></i>
                   <p>Club & Activities</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="{{ url('/vote') }}" class="nav-link {{ Request::is('vote') ? 'active' : '' }}">
-                  <i class="far fa-circle nav-icon"></i>
+                  <i class="fas fa-hand-point-up nav-icon text-warning"></i>
                   <p>Voting</p>
                 </a>
               </li>
                <li class="nav-item">
                 <a href="{{ url('/proposal') }}" class="nav-link {{ Request::is('proposal') ? 'active' : '' }}">
-                  <i class="far fa-circle nav-icon"></i>
+                  <i class="fas fa-file-alt nav-icon text-success"></i>
                   <p>Proposal</p>
                 </a>
               </li>
                <li class="nav-item">
                 <a href="{{ url('/user') }}" class="nav-link {{ Request::is('user') ? 'active' : '' }}">
-                  <i class="far fa-circle nav-icon"></i>
+                  <i class="fa fa-users nav-icon text-info"></i>
                   <p>User Management</p>
                 </a>
               </li>
@@ -140,7 +142,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <a href="{{ route('logout') }}" class="nav-link "
                  onclick="event.preventDefault();
                   this.closest('form').submit();">
-                  <i class="far fa-circle nav-icon"></i>
+                  <i class="fa fa-power-off nav-icon text-danger"></i>
                   <p>{{ __('Logout') }}</p> @csrf
                                  
                 </a>
@@ -177,10 +179,32 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <!-- REQUIRED SCRIPTS -->
 
 <!-- jQuery -->
-<script src="plugins/jquery/jquery.min.js"></script>
+<script src="{{ asset('plugins/jquery/jquery.min.js') }}"></script>
 <!-- Bootstrap 4 -->
-<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="{{ asset('plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 <!-- AdminLTE App -->
-<script src="dist/js/adminlte.min.js"></script>
+<script src="{{ asset('dist/js/adminlte.min.js') }}"></script>
+<script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/responsive/2.2.5/js/dataTables.responsive.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+<script type="text/javascript">
+ $(document).ready(function() {
+    $('.table').DataTable( {
+        responsive: {
+            details: {
+                type: 'column',
+                target: 'tr'
+            }
+        },
+        columnDefs: [ {
+            className: 'control',
+            orderable: false,
+            targets:   0
+        } ],
+        order: [ 1, 'asc' ]
+    } );
+} );
+</script>
+@toastr_render
 </body>
 </html>

@@ -15,8 +15,69 @@
 
     <!-- Main content -->
     <div class="content">
-      <div class="container-fluid">
-         hello
+       <div class="container-fluid">
+      <div class="card ">
+  <div class="card-body">
+    <div class="row">
+        <div class="col-lg-12 margin-tb">
+            <div class="pull-right">
+                <a class="btn btn-dark" href="{{ url('user/create') }}"> Create New User</a>
+            </div>
+        </div>
     </div>
-  </div>
+    
+   <br>
+    <table class="table table-bordered" id="table">
+        <thead>
+        <tr>
+          <th></th>
+            <th>No</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Type</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+       
+        @foreach ($User as $key => $Users)
+        <tr>
+          <td></td>
+            <td>{{ $key+1 }}</td>
+            <td>{{ $Users->name }}</td>
+           <td>{{ $Users->email }}</td>
+            <?php if ($Users->user_type == 1):?>
+            <td>Admin</td>
+            <?php elseif ($Users->user_type == 2):?>
+            <td>Committee</td>
+            <?php else:?>
+            <td>Member</td>
+            <?php endif;?>
+
+            <td>
+                <form action="{{ url('user/destroy',$Users->id) }}" method="POST">
+   
+            
+                  <a class="btn btn-success" href="{{ url('user/show',$Users->id) }}">View</a>
+                
+                    <a class="btn btn-primary" href="{{ url('user/edit',$Users->id) }}">Edit</a>
+   
+
+                    @csrf
+                    @method('DELETE')
+                    <button class="btn btn-danger" type="submit" class="text-danger">Delete</button>
+                   
+                </form>
+            </td>
+        </tr>
+        @endforeach
+    </tbody>
+    </table>
+  
+    
+</div>
+</div>
+</div>
+</div>
+
 @endsection
