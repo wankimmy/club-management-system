@@ -11,10 +11,5 @@ class Club extends Model
     
     protected $table = 'clubs';
 
-     protected $fillable = [
-        'club_name',
-        'club_prefix',
-        'club_picture',
-        'club_desc',
-    ];
+    protected $guarded = [];
 }

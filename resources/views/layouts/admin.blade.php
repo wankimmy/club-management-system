@@ -21,6 +21,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.5/css/responsive.dataTables.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css"> 
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/clockpicker/0.0.7/bootstrap-clockpicker.css"> 
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
@@ -187,6 +189,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/responsive/2.2.5/js/dataTables.responsive.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clockpicker/0.0.7/jquery-clockpicker.min.js"></script>
 <script type="text/javascript">
  $(document).ready(function() {
     $('.table').DataTable( {
@@ -203,6 +207,17 @@ scratch. This page gets rid of all links and provides the needed markup only.
         } ],
         order: [ 1, 'asc' ]
     } );
+    $( ".datepicker" ).datepicker({
+       format: 'dd/mm/yyyy',
+       autoclose: "true",
+       todayHighlight: "true",
+       minDate: 0,
+
+    });
+    $('.clockpicker').clockpicker({
+      autoclose: true,
+      'default': 'now'
+    });
 } );
 </script>
 @toastr_render

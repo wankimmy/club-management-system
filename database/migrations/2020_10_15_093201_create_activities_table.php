@@ -17,9 +17,12 @@ class CreateActivitiesTable extends Migration
             $table->id();
             $table->string('club_id')->nullable();
             $table->string('user_id')->nullable();
+            $table->string('name')->nullable();
             $table->string('poster')->nullable();
-            $table->string('date')->nullable();
-            $table->string('time')->nullable();
+            $table->string('start_date')->nullable();
+            $table->string('start_time')->nullable();
+            $table->string('end_date')->nullable();
+            $table->string('end_time')->nullable();
             $table->string('desc')->nullable();
             $table->string('status')->nullable();
             $table->timestamps();

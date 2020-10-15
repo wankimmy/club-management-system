@@ -43,13 +43,13 @@
             <td>
                 <form action="{{ url('club/destroy',$value->id) }}" method="POST">
   
-                  <a class="btn btn-success" href="{{ url('club/show',$value->id) }}">View</a>
+                  <!-- <a class="btn btn-success" href="{{ url('club/show',$value->id) }}">View</a> -->
                 
                     <a class="btn btn-primary" href="{{ url('club/edit',$value->id) }}">Edit</a>
    
                     @csrf
                     @method('DELETE')
-                    <button class="btn btn-danger" type="submit" class="text-danger">Delete</button>
+                    <!-- <button class="btn btn-danger" type="submit" class="text-danger">Delete</button> -->
                    
                 </form>
             </td>
@@ -95,7 +95,7 @@
         <tr>
           <th></th>
             <th>No</th>
-            <th>Poster</th>
+            <th style="width: 20%;">Poster</th>
             <th>Description</th>
             <th>Date</th>
             <th>Time</th>
@@ -109,18 +109,33 @@
         <tr>
           <td></td>
             <td>{{ $key+1 }}</td>
-            <td>{{ $value->poster }}</td>
+            <td><img src="{{URL::asset('/uploads/'.'/'.$value->poster)}}" style="width: 100%;"></td>
            <td>{{ $value->desc }}</td>
-           <td>{{ $value->date }}</td>
-           <td>{{ $value->time }}</td>
-           <td>{{ $value->status }}</td>
+           <td>{{ $value->start_date }}</td>
+           <td>{{ $value->start_time }}</td>
+           <td>
+            @if ($value->status == '1')
+            Pending
+            @elseif ($value->status == '2')
+            Approved
+            @else
+            Rejected
+            @endif
+          </td>
             <td>
                 <form action="{{ url('activity/destroy',$value->id) }}" method="POST">
-  
-                  <a class="btn btn-success" href="{{ url('activity/show',$value->id) }}">View</a>
-                
-                    <a class="btn btn-primary" href="{{ url('activity/edit',$value->id) }}">Edit</a>
-   
+                  <a class="btn btn-info" href="{{ url('activity/show',$value->id) }}">View</a>
+                  <a class="btn btn-primary" href="{{ url('activity/edit',$value->id) }}">Edit</a>
+
+                   @if ($value->status == '1' && Auth::user()->role == '1' || Auth::user()->role == '2') 
+                    <a class="btn btn-success" href="{{ url('activity/status/'.$value->id.'/2') }}">Approve</a>
+                    <a class="btn btn-warning" href="{{url('activity/status/'.$value->id.'/3') }}">Reject</a>
+                   @elseif ($value->status == '2')
+                    <a class="btn btn-warning" href="{{url('activity/status/'.$value->id.'/3') }}">Reject</a>
+                   @else
+                    <a class="btn btn-success" href="{{ url('activity/status/'.$value->id.'/2') }}">Approve</a>
+                   @endif
+                 
                     @csrf
                     @method('DELETE')
                     <button class="btn btn-danger" type="submit" class="text-danger">Delete</button>

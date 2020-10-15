@@ -38,6 +38,24 @@ class UserTableSeeder extends Seeder
         	'profile_photo_path' => 'user3-128x128.jpg',
         	'club_id' => '1'
         ]);
+
+        User::create([
+            'name' => 'comm',
+            'email' => 'comm@gmail.com',
+            'password' => Hash::make('password'),
+            'user_type' => '2',
+            'profile_photo_path' => 'user3-128x128.jpg',
+            'club_id' => '1'
+        ]);
+
+        User::create([
+            'name' => 'member',
+            'email' => 'member@gmail.com',
+            'password' => Hash::make('password'),
+            'user_type' => '3',
+            'profile_photo_path' => 'user3-128x128.jpg',
+            'club_id' => '1'
+        ]);
     }
 }
 

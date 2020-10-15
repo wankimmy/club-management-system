@@ -11,9 +11,5 @@ class Vote extends Model
 
     protected $table = 'votes';
 
-     protected $fillable = [
-        'committee_id',
-        'user_id',
-        'remark'
-    ];
+    protected $guarded = [];
 }

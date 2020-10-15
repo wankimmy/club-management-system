@@ -11,13 +11,6 @@ class Activities extends Model
 
      protected $table = 'activities';
 
-     protected $fillable = [
-        'club_id',
-        'user_id',
-        'poster',
-        'date',
-        'time',
-        'desc',
-        'status',
-    ];
+     protected $guarded = [];
+
 }

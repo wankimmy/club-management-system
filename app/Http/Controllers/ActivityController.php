@@ -3,10 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Club;
 use App\Models\Activities;
+use Auth;
 
-class ClubController extends Controller
+class ActivityController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -19,14 +19,6 @@ class ClubController extends Controller
     $this->middleware('auth');
     }
     
-    public function index()
-    {
-        $Club = Club::get();
-        $Activities = Activities::get();
-
-        return view('club.index',compact('Club', 'Activities'));
-
-    }
 
     /**
      * Show the form for creating a new resource.
@@ -35,7 +27,7 @@ class ClubController extends Controller
      */
     public function create()
     {
-        //
+       return view('activity.create');
     }
 
     /**
@@ -46,7 +38,40 @@ class ClubController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+        'name'=>'required',
+        'poster'=>'required',
+        'start_date'=> 'required',
+        'start_time' => 'required',
+        'end_date'=> 'required',
+        'end_time' => 'required',
+        'desc' => 'required'
+        ]);
+    
+         $Activities = new Activities([
+        'club_id'=> '1',
+        'user_id'=> Auth::user()->id,
+        'name'=> $request->get('name'),
+        'poster' => $request->file('poster')->getClientOriginalName(),
+        'start_date'=> $request->get('start_date'),
+        'start_time'=>  $request->get('start_time'),
+        'end_date'=> $request->get('end_date'),
+        'end_time'=>  $request->get('end_time'),
+        'desc'=> $request->get('desc'),
+        'status'=> '1',
+        ]);
+
+         if ($request->hasFile('poster')) {
+        $image = $request->file('poster');
+        $name = $image->getClientOriginalName();
+        $destinationPath = public_path('/uploads');
+        $image->move($destinationPath, $name);
+        }
+
+       $Activities->save();
+       toastr()->success('Activities has been added successfully!');
+       
+       return redirect('/home');
     }
 
     /**
@@ -60,6 +85,16 @@ class ClubController extends Controller
         //
     }
 
+    public function status($id, $status)
+    {
+        Activities::where('id', $id)->update([
+            'status' => $status,
+       ]);
+        
+      toastr()->success('Activities has been updated successfully!');
+      return redirect('/home');
+    }
+
     /**
      * Show the form for editing the specified resource.
      *
@@ -68,9 +103,10 @@ class ClubController extends Controller
      */
     public function edit($id)
     {
-         $Club = Club::find($id);
+         $Activities = Activities::find($id);
 
-        return view('club.edit', compact('Club'));
+        return view('activity.edit', compact('Activities'));
+
     }
 
     /**
@@ -95,7 +131,7 @@ class ClubController extends Controller
             'user_type' => $role,
        ]);
 
-       toastr()->success('Club has been updated successfully!');
+       toastr()->success('Activities has been updated successfully!');
       return redirect('/home');
     }
 
@@ -107,6 +143,10 @@ class ClubController extends Controller
      */
     public function destroy($id)
     {
-        //
+     $Activities = Activities::find($id);
+     $Activities->delete();
+
+      toastr()->success('Activities has been deleted successfully!');
+      return redirect('/home');
     }
 }
