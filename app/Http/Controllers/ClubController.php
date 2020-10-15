@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Club;
+use App\Models\Activities;
 
 class ClubController extends Controller
 {
@@ -19,8 +21,11 @@ class ClubController extends Controller
     
     public function index()
     {
+        $Club = Club::get();
+        $Activities = Activities::get();
 
-    return view('club.index');
+        return view('club.index',compact('Club', 'Activities'));
+
     }
 
     /**

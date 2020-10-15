@@ -18,11 +18,14 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
+            $table->string('student_id')->nullable();
+            $table->string('semester')->nullable();
+            $table->string('course')->nullable();
+            $table->string('password')->nullable();
             // 1 - admin , 2 - comittee, 3 - member
             $table->enum('user_type', ['1', '2', '3'])->nullable();
             $table->rememberToken();
-            $table->string('current_team_id')->nullable();
+            $table->string('club_id')->nullable();
             $table->text('profile_photo_path')->nullable();
             $table->timestamps();
         });

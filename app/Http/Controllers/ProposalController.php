@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Proposal;
 
 class ProposalController extends Controller
 {
@@ -19,8 +20,8 @@ class ProposalController extends Controller
 
     public function index()
     {
-
-    return view('proposal.index');
+        $Proposal = Proposal::get();
+        return view('proposal.index',compact('Proposal'));
     }
 
     /**

@@ -24,6 +24,8 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/home', function () {
 
 })->name('home');
 
+Route::get('/home', [Controllers\ClubController::class, 'index'])->name('home');
+
  Route::get('/vote', [Controllers\VoteController::class, 'index'])->name('index');
 
 Route::get('/user', [Controllers\UserController::class, 'index'])->name('user.index');
