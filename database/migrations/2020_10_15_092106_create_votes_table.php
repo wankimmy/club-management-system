@@ -15,6 +15,7 @@ class CreateVotesTable extends Migration
     {
         Schema::create('votes', function (Blueprint $table) {
             $table->id();
+            $table->string('nominee_id')->nullable();
             $table->string('committee_id')->nullable();
             $table->string('user_id')->nullable();
             $table->string('remark')->nullable();

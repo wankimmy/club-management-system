@@ -27,6 +27,15 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/home', function () {
 
 
 Route::get('/vote', [Controllers\VoteController::class, 'index'])->name('index');
+Route::post('/vote/store', [Controllers\VoteController::class, 'store'])->name('vote.store');
+Route::post('/vote/voting', [Controllers\VoteController::class, 'voting'])->name('vote.voting');
+Route::get('/vote/result/{id}', [Controllers\VoteController::class, 'result'])->name('vote.result');
+Route::get('/vote/create', [Controllers\VoteController::class, 'create'])->name('vote.create');
+Route::get('/vote/show/{id}', [Controllers\VoteController::class, 'show'])->name('vote.show');
+Route::get('/vote/status/{id}/{status}', [Controllers\VoteController::class, 'status'])->name('vote.status');
+Route::post('vote/update', [Controllers\VoteController::class, 'update']);
+Route::delete('/vote/destroy/{id}', [Controllers\VoteController::class, 'destroy'])->name('vote.destroy');
+Route::get('/vote/edit/{id}', [Controllers\VoteController::class, 'edit'])->name('vote.edit');
 
 Route::get('/user', [Controllers\UserController::class, 'index'])->name('user.index');
 Route::post('/user/store', [Controllers\UserController::class, 'store'])->name('user.store');
@@ -40,6 +49,7 @@ Route::get('/proposal', [Controllers\ProposalController::class, 'index'])->name(
 Route::post('/proposal/store', [Controllers\ProposalController::class, 'store'])->name('proposal.store');
 Route::get('/proposal/create', [Controllers\ProposalController::class, 'create'])->name('proposal.create');
 Route::get('/proposal/show/{id}', [Controllers\ProposalController::class, 'show'])->name('proposal.show');
+Route::get('/proposal/status/{id}/{status}', [Controllers\ProposalController::class, 'status'])->name('proposal.status');
 Route::post('proposal/update', [Controllers\ProposalController::class, 'update']);
 Route::delete('/proposal/destroy/{id}', [Controllers\ProposalController::class, 'destroy'])->name('proposal.destroy');
 Route::get('/proposal/edit/{id}', [Controllers\ProposalController::class, 'edit'])->name('proposal.edit');

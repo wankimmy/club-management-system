@@ -9,7 +9,7 @@ class Nominees extends Model
 {
     use HasFactory;
 
-     protected $table = 'nomuniees';
+     protected $table = 'nominees';
 
     protected $guarded = [];
 }

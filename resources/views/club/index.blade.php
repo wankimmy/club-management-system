@@ -28,7 +28,9 @@
             <th>Logo</th>
             <th>Name</th>
             <th>Description</th>
+            @if (Auth::user()->user_type == '1'|| Auth::user()->user_type == '2')
             <th>Action</th>
+            @endif
         </tr>
     </thead>
     <tbody>
@@ -40,6 +42,7 @@
             <td>{{ $value->club_picture }}</td>
            <td>{{ $value->club_name }}</td>
            <td>{{ $value->club_desc }}</td>
+            @if (Auth::user()->user_type == '1'|| Auth::user()->user_type == '2')
             <td>
                 <form action="{{ url('club/destroy',$value->id) }}" method="POST">
   
@@ -53,6 +56,7 @@
                    
                 </form>
             </td>
+             @endif
         </tr>
         @endforeach
     </tbody>
@@ -127,7 +131,7 @@
                   <a class="btn btn-info" href="{{ url('activity/show',$value->id) }}">View</a>
                   <a class="btn btn-primary" href="{{ url('activity/edit',$value->id) }}">Edit</a>
 
-                   @if ($value->status == '1' && Auth::user()->role == '1' || Auth::user()->role == '2') 
+                   @if ($value->status == '1' && Auth::user()->user_type == '1' || Auth::user()->user_type == '2') 
                     <a class="btn btn-success" href="{{ url('activity/status/'.$value->id.'/2') }}">Approve</a>
                     <a class="btn btn-warning" href="{{url('activity/status/'.$value->id.'/3') }}">Reject</a>
                    @elseif ($value->status == '2')

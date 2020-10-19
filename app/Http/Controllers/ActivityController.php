@@ -116,20 +116,37 @@ class ActivityController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-      $user_id = $request->input('user_id');
+      $activity_id = $request->input('activity_id');
       $name = $request->input('name');
-      $email = $request->input('email');
-      $password = $request->input('password');
-      $role = $request->input('role');
+      $start_date = $request->input('start_date');
+      $start_time = $request->input('start_time');
+      $end_date = $request->input('end_date');
+      $end_time = $request->input('end_time');
+      $desc = $request->input('desc');
+       if ($request->hasFile('poster')) {
+      $poster = $request->file('poster')->getClientOriginalName();
+      }
 
-       User::where('id', $user_id)->update([
+       Activities::where('id', $activity_id)->update([
             'name' => $name,
-            'email' => $email,
-            // 'password' => Hash::make($password),
-            'user_type' => $role,
+            'start_date' => $start_date,
+            'start_time' => $start_time,
+            'end_date' => $end_date,
+            'end_time' => $end_time,
+            'desc' => $desc,
        ]);
+
+         if ($request->hasFile('poster')) {
+            $image = $request->file('poster');
+            $name = $image->getClientOriginalName();
+            $destinationPath = public_path('/uploads');
+            $image->move($destinationPath, $name);
+            Activities::where('id', $activity_id)->update([
+               'poster' => $poster,
+              ]);
+        }
 
        toastr()->success('Activities has been updated successfully!');
       return redirect('/home');

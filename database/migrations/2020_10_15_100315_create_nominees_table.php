@@ -26,6 +26,7 @@ class CreateNomineesTable extends Migration
             $table->string('committee_id9')->nullable();
             $table->string('committee_id10')->nullable();
             $table->string('status')->nullable();
+            $table->string('position')->nullable();
             $table->timestamps();
         });
     }

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Club;
 use App\Models\Activities;
+use Auth;
 
 class ClubController extends Controller
 {
@@ -21,8 +22,15 @@ class ClubController extends Controller
     
     public function index()
     {
+        if (Auth::user()->user_type == '1' || Auth::user()->user_type == '2') {
+            $Activities = Activities::get();
+
+        }else{
+
+            $Activities = Activities::where('status', '2')->get();
+        }
+
         $Club = Club::get();
-        $Activities = Activities::get();
 
         return view('club.index',compact('Club', 'Activities'));
 

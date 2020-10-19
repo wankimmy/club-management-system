@@ -133,11 +133,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   <p>Proposal</p>
                 </a>
               </li>
+             @if (Auth::user()->user_type == '1'|| Auth::user()->user_type == '2')
                <li class="nav-item">
                 <a href="{{ url('/user') }}" class="nav-link {{ Request::is('user') ? 'active' : '' }}">
                   <i class="fa fa-users nav-icon text-info"></i>
                   <p>User Management</p>
                 </a>
+                @endif
               </li>
                <li class="nav-item">
                  <form method="POST" action="{{ route('logout') }}">
