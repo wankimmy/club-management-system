@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
+use Auth;
 
 class UserController extends Controller
 {
@@ -19,8 +20,13 @@ class UserController extends Controller
     }
 
     public function index()
-    {
+    {   
+        if (Auth::user()->user_type == '1' || Auth::user()->user_type == '2') {
         $User = User::get();
+
+         }else{
+            $User = User::where('id', Auth::user()->id)->get();
+        }
         return view('user.index',compact('User'));
     }
 
@@ -44,18 +50,34 @@ class UserController extends Controller
     {
         
         $request->validate([
+        'profile_photo_path'=>'required',
         'name'=>'required',
         'email'=> 'required',
         'password' => 'required',
-        'role' => 'required'
+        'role' => 'required',
+        'student_id' => 'required',
+        'semester' => 'required',
+        'course' => 'required',
         ]);
     
          $User = new User([
+        'profile_photo_path' => $request->file('profile_photo_path')->getClientOriginalName(),
         'name' => $request->get('name'),
         'email'=> $request->get('email'),
         'password'=>  Hash::make($request->get('password')),
         'user_type'=> $request->get('role'),
+        'student_id' => $request->get('student_id'),
+        'semester' => $request->get('semester'),
+        'course' => $request->get('course'),
+        'club_id'=> '1',
         ]);
+
+         if ($request->hasFile('profile_photo_path')) {
+        $image = $request->file('profile_photo_path');
+        $name = $image->getClientOriginalName();
+        $destinationPath = public_path('/uploads');
+        $image->move($destinationPath, $name);
+        }
 
        $User->save();
        toastr()->success('User has been added successfully!');
@@ -102,13 +124,34 @@ class UserController extends Controller
       $email = $request->input('email');
       $password = $request->input('password');
       $role = $request->input('role');
+      $student_id = $request->input('student_id');
+      $semester = $request->input('semester');
+      $course = $request->input('course');
+
+      if ($request->hasFile('profile_photo_path')) {
+      $profile_photo_path = $request->file('profile_photo_path')->getClientOriginalName();
+      }
+
 
        User::where('id', $user_id)->update([
             'name' => $name,
             'email' => $email,
+            'student_id' => $student_id,
+            'semester' => $semester,
+            'course' => $course,
             // 'password' => Hash::make($password),
             'user_type' => $role,
        ]);
+
+       if ($request->hasFile('profile_photo_path')) {
+            $image = $request->file('profile_photo_path');
+            $name = $image->getClientOriginalName();
+            $destinationPath = public_path('/uploads');
+            $image->move($destinationPath, $name);
+            User::where('id', $user_id)->update([
+               'profile_photo_path' => $profile_photo_path,
+              ]);
+        }
 
        toastr()->success('User has been updated successfully!');
       return redirect('/user');

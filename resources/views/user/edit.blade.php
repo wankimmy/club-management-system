@@ -27,12 +27,195 @@
         </ul>
       </div><br />
     @endif
-      <form method="post" action="{{ url('/user/update') }}">
+      <form enctype="multipart/form-data" method="post" action="{{ url('/user/update') }}">
          @csrf
          <input type="hidden" name="user_id" value="{{ $User->id }}">
+
+          @if($User->profile_photo_path == NULL)
+        <div class="form-group">
+              <label for="profile_photo_path">Profile :</label>
+              <input type="file" class="form-control" name="profile_photo_path" id="profile_photo_path">
+          </div>
+          @else
+
+ <div class="form-group">
+              <label for="profile_photo_path">Profile :</label><br>
+             <img src="{{URL::asset('/uploads/'.'/'.$User->profile_photo_path)}}" style="width: 30%;">
+              <input type="file" class="form-control" name="profile_photo_path" id="profile_photo_path">
+          </div>
+          @endif
+
         <div class="form-group">
               <label for="price">Name :</label>
               <input type="text" class="form-control" name="name"  value="{{ $User->name }}"/>
+          </div>
+
+           <div class="form-group">
+              <label for="price">Student ID :</label>
+              <input type="text" class="form-control" name="student_id" value="{{ $User->student_id }}"/>
+          </div>
+
+          <div class="form-group">
+              <label for="quantity">Semester:</label>
+              <select class="form-control select2" name="semester" style="width: 100%;">
+
+                <?php if ($User->semester == ''):?>
+                  <option value="">Please Select Semester</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <?php endif; ?>
+
+                    <?php if ($User->semester == '1'):?>
+                      <option selected="selected" value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <?php endif; ?>
+
+                    <?php if ($User->semester == '2'):?>
+                      <option value="1">1</option>
+                    <option selected="selected" value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <?php endif; ?>
+
+                    <?php if ($User->semester == '3'):?>
+                      <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option selected="selected" value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <?php endif; ?>
+
+                    <?php if ($User->semester == '4'):?>
+                      <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option selected="selected" value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <?php endif; ?>
+
+                    <?php if ($User->semester == '5'):?>
+                      <option  value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option selected="selected" value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <?php endif; ?>
+
+                    <?php if ($User->semester == '6'):?>
+                      <option  value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option selected="selected" value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <?php endif; ?>
+
+                    <?php if ($User->semester == '7'):?>
+                      <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option selected="selected" value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <?php endif; ?>
+
+                    <?php if ($User->semester == '8'):?>
+                      <option  value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option selected="selected" value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <?php endif; ?>
+
+                    <?php if ($User->semester == '9'):?>
+                      <option  value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option selected="selected" value="9">9</option>
+                    <option value="10">10</option>
+                    <?php endif; ?>
+
+                    <?php if ($User->semester == '10'):?>
+                      <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option selected="selected" value="10">10</option>
+                    <?php endif; ?>
+                    
+                  </select>
+          </div>
+
+          <div class="form-group">
+              <label for="quantity">Course:</label>
+              <select class="form-control select2" name="course" style="width: 100%;">
+                <?php if ($User->course == 'BSE'):?>
+                  <option selected="selected" value="BSE">Bachelor in Software Engineering</option>
+                  <?php else:?>
+                    <option value="">Please Select Course</option>
+                    <option value="BSE">Bachelor in Software Engineering</option>
+                <?php endif; ?>
+                  </select>
           </div>
          
           <div class="form-group">

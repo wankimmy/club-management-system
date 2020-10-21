@@ -101,7 +101,22 @@ class VoteController extends Controller
     public function result($id)
     {
         $Nominees = Nominees::where('id', $id)->first();
-        return view('vote.result',compact('Nominees'));
+
+       $user1 = User::where('id',$Nominees->committee_id1)->first(); 
+       $user2 = User::where('id',$Nominees->committee_id2)->first();
+       $user3 = User::where('id',$Nominees->committee_id3)->first();
+       $user4 = User::where('id',$Nominees->committee_id4)->first();
+       $user5 = User::where('id',$Nominees->committee_id5)->first();
+       $user6 = User::where('id',$Nominees->committee_id6)->first();
+
+       $user1Vote = Vote::where('nominee_id', $id)->where('committee_id', $Nominees->committee_id1)->count();
+       $user2Vote = Vote::where('nominee_id', $id)->where('committee_id', $Nominees->committee_id2)->count();
+       $user3Vote = Vote::where('nominee_id', $id)->where('committee_id', $Nominees->committee_id3)->count();
+       $user4Vote = Vote::where('nominee_id', $id)->where('committee_id', $Nominees->committee_id4)->count();
+       $user5Vote = Vote::where('nominee_id', $id)->where('committee_id', $Nominees->committee_id5)->count();
+       $user6Vote = Vote::where('nominee_id', $id)->where('committee_id', $Nominees->committee_id6)->count();
+
+        return view('vote.result',compact('Nominees','user1','user2','user3','user4','user5','user6','user1Vote','user2Vote','user3Vote','user4Vote','user5Vote','user6Vote'));
     }
 
      public function status($id, $status)
@@ -122,6 +137,11 @@ class VoteController extends Controller
         $vote->user_id = Auth::user()->id;
         $vote->remark = '1';
         $vote->save();
+
+       //  $Nominees = Nominees::where('id', $request->get('nominee_id'))->first();
+       //  Nominees::where('id', $request->get('nominee_id'))->update([
+       //      'remark' => $Nominees->remark + 1,
+       // ]);
 
        toastr()->success('Vote Success!');
       return redirect('/vote');

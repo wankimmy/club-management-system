@@ -23,6 +23,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.5/css/responsive.dataTables.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css"> 
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/clockpicker/0.0.7/bootstrap-clockpicker.css"> 
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.css"> 
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
@@ -34,10 +35,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <li class="nav-item">
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
-      <!-- <li class="nav-item d-none d-sm-inline-block">
-        <a href="index3.html" class="nav-link">Home</a>
-      </li>
+
       <li class="nav-item d-none d-sm-inline-block">
+        <!-- <a href="#" class="nav-link"><h5><b>CLUB MANAGEMENT SYSTEM</b></h5></a> -->
+      </li>
+     <!--  <li class="nav-item d-none d-sm-inline-block">
         <a href="#" class="nav-link">Contact</a>
       </li> -->
     </ul>
@@ -45,11 +47,17 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- SEARCH FORM -->
     <form class="form-inline ml-3">
       <div class="input-group input-group-sm">
-        <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+
+        <!-- <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search"> -->
         <div class="input-group-append">
-          <button class="btn btn-navbar" type="submit">
+
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="#" class="nav-link"><h5><b>CLUB MANAGEMENT SYSTEM</b></h5></a>
+      </li>
+   <!-- <h5><b>CLUB MANAGEMENT SYSTEM</b></h5> -->
+          <!-- <button class="btn btn-navbar" type="submit">
             <i class="fas fa-search"></i>
-          </button>
+          </button> -->
         </div>
       </div>
     </form>
@@ -58,7 +66,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <ul class="navbar-nav ml-auto">
       
       <!-- Notifications Dropdown Menu -->
-      <li class="nav-item dropdown">
+     <!--  <li class="nav-item dropdown">
         <a class="nav-link" data-toggle="dropdown" href="#">
           <i class="far fa-bell"></i>
           <span class="badge badge-warning navbar-badge">15</span>
@@ -83,7 +91,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <div class="dropdown-divider"></div>
           <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
         </div>
-      </li>
+      </li> -->
     
     </ul>
   </nav>
@@ -92,7 +100,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="index3.html" class="brand-link">
+    <a href="{{ url('/home') }}" class="brand-link">
       <img src="{{ asset('dist/img/logo.png') }}" alt="Unikl Logo" class="brand-image img-circle elevation-3"
            style="opacity: .8">
       <span class="brand-text font-weight-light">Club Management</span>
@@ -103,7 +111,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="{{ asset('dist/img/user3-128x128.jpg') }}" class="img-circle elevation-2" alt="User Image">
+          <img src="{{URL::asset('/uploads/'.'/'.Auth::user()->profile_photo_path)}}" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
           <a href="#" class="d-block">{{ Auth::user()->name }}</a>
@@ -139,8 +147,16 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   <i class="fa fa-users nav-icon text-info"></i>
                   <p>User Management</p>
                 </a>
+                 </li>
+                @else
+                <li class="nav-item">
+                <a href="{{ url('/user') }}" class="nav-link {{ Request::is('user') ? 'active' : '' }}">
+                  <i class="fa fa-user nav-icon text-info"></i>
+                  <p>Profile</p>
+                </a>
+                 </li>
                 @endif
-              </li>
+             
                <li class="nav-item">
                  <form method="POST" action="{{ route('logout') }}">
                 <a href="{{ route('logout') }}" class="nav-link "
@@ -172,10 +188,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <footer class="main-footer">
     <!-- To the right -->
     <div class="float-right d-none d-sm-inline">
-      Anything you want
+      Rafiah Jawahir
     </div>
     <!-- Default to the left -->
-    <strong>Copyright &copy; 2014-2019 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
+    <strong>Copyright &copy; 2020 <a href="#">UNIKL MIIT</a>.</strong> All rights reserved.
   </footer>
 </div>
 <!-- ./wrapper -->
@@ -186,8 +202,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="{{ asset('plugins/jquery/jquery.min.js') }}"></script>
 <!-- Bootstrap 4 -->
 <script src="{{ asset('plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
 <!-- AdminLTE App -->
 <script src="{{ asset('dist/js/adminlte.min.js') }}"></script>
+<script src="{{ asset('dist/js/demo.js') }}"></script>
 <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/responsive/2.2.5/js/dataTables.responsive.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>

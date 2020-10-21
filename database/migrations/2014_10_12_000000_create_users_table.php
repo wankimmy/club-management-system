@@ -26,7 +26,7 @@ class CreateUsersTable extends Migration
             $table->enum('user_type', ['1', '2', '3'])->nullable();
             $table->rememberToken();
             $table->string('club_id')->nullable();
-            $table->text('profile_photo_path')->nullable();
+            $table->string('profile_photo_path')->nullable();
             $table->timestamps();
         });
     }

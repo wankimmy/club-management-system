@@ -46,7 +46,7 @@ use App\Models\Vote;
             <th>Nominee 6</th>
             <th>Position</th>
             <th>Status</th>
-            <th style="width: 50%">Action</th>
+            <th style="width: 100%">Action</th>
         </tr>
     </thead>
     <tbody>
@@ -67,14 +67,14 @@ use App\Models\Vote;
             <center>
             {{$user1->name}}
               <br><br>
-              <img src="{{URL::asset('/uploads'.'/'.$user1->profile_photo_path)}}" style="width: 50%;">
+              <img src="{{URL::asset('/uploads'.'/'.$user1->profile_photo_path)}}" style="width: 100%;">
            </center>
          </td>
            <td>
             <center>
                {{$user2->name}}
               <br><br>
-              <img src="{{URL::asset('/uploads'.'/'.$user2->profile_photo_path)}}" style="width: 50%;">
+              <img src="{{URL::asset('/uploads'.'/'.$user2->profile_photo_path)}}" style="width: 100%;">
             </center>
           </td>
            <td>
@@ -82,7 +82,7 @@ use App\Models\Vote;
             <center>
             {{$user3->name}}
              <br><br>
-              <img src="{{URL::asset('/uploads'.'/'.$user3->profile_photo_path)}}" style="width: 50%;">
+              <img src="{{URL::asset('/uploads'.'/'.$user3->profile_photo_path)}}" style="width: 100%;">
             </center>
             @else
 
@@ -93,7 +93,7 @@ use App\Models\Vote;
             <center>
               {{$user4->name}}
              <br><br>
-              <img src="{{URL::asset('/uploads'.'/'.$user4->profile_photo_path)}}" style="width: 50%;"></center>
+              <img src="{{URL::asset('/uploads'.'/'.$user4->profile_photo_path)}}" style="width: 100%;"></center>
             @else
 
             @endif
@@ -103,7 +103,7 @@ use App\Models\Vote;
             <center>
               {{$user5->name}}
              <br><br>
-              <img src="{{URL::asset('/uploads'.'/'.$user5->profile_photo_path)}}" style="width: 50%;"></center>
+              <img src="{{URL::asset('/uploads'.'/'.$user5->profile_photo_path)}}" style="width: 100%;"></center>
             @else
 
             @endif
@@ -113,7 +113,7 @@ use App\Models\Vote;
             <center>
               {{$user6->name}}
              <br><br>
-              <img src="{{URL::asset('/uploads'.'/'.$user6->profile_photo_path)}}" style="width: 50%;"></center>
+              <img src="{{URL::asset('/uploads'.'/'.$user6->profile_photo_path)}}" style="width: 100%;"></center>
             @else
 
             @endif

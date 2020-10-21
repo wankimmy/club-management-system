@@ -27,11 +27,47 @@
         </ul>
       </div><br />
     @endif
-      <form method="post" action="{{ url('/user/store') }}">
+      <form enctype="multipart/form-data" method="post" action="{{ url('/user/store') }}">
          @csrf
+
+         <div class="form-group">
+              <label for="profile_photo_path">Picture :</label>
+              <input type="file" class="form-control" name="profile_photo_path" id="profile_photo_path">
+          </div>
+
         <div class="form-group">
               <label for="price">Name :</label>
               <input type="text" class="form-control" name="name"/>
+          </div>
+
+          <div class="form-group">
+              <label for="price">Student ID :</label>
+              <input type="text" class="form-control" name="student_id"/>
+          </div>
+
+          <div class="form-group">
+              <label for="quantity">Semester:</label>
+              <select class="form-control select2" name="semester" style="width: 100%;">
+                    <option value="">Please Select Semester</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                  </select>
+          </div>
+
+          <div class="form-group">
+              <label for="quantity">Course:</label>
+              <select class="form-control select2" name="course" style="width: 100%;">
+                    <option value="">Please Select Course</option>
+                    <option value="BSE">Bachelor in Software Engineering</option>
+                  </select>
           </div>
          
           <div class="form-group">
