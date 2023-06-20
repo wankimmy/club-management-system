@@ -52,7 +52,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <div class="input-group-append">
 
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link"><h5><b>CLUB MANAGEMENT SYSTEM</b></h5></a>
+        <a href="#" class="nav-link"><h5><b class="text-dark"></b></h5></a>
       </li>
    <!-- <h5><b>CLUB MANAGEMENT SYSTEM</b></h5> -->
           <!-- <button class="btn btn-navbar" type="submit">
@@ -98,12 +98,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- /.navbar -->
 
   <!-- Main Sidebar Container -->
-  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+  <aside class="main-sidebar sidebar-dark-primary elevation-4 bg-black">
     <!-- Brand Logo -->
     <a href="{{ url('/home') }}" class="brand-link">
-      <img src="{{ asset('dist/img/logo.png') }}" alt="Unikl Logo" class="brand-image img-circle elevation-3"
-           style="opacity: .8">
-      <span class="brand-text font-weight-light">Club Management</span>
+      <span class="brand-text font-weight-bold">YUNIVENT</span>
     </a>
 
     <!-- Sidebar -->
@@ -123,6 +121,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
+               <li class="nav-item">
+                <a href="{{ url('/dashboard') }}" class="nav-link {{ Request::is('dashboard') ? 'active' : '' }}">
+                  <i class="fas fa-home nav-icon text-blue"></i>
+                  <p>Dashboard</p>
+                </a>
+              </li>
               <li class="nav-item">
                 <a href="{{ url('/home') }}" class="nav-link {{ Request::is('home') ? 'active' : '' }}">
                   <i class="fas fa-dumbbell nav-icon text-white"></i>
@@ -176,7 +180,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   </aside>
 
   <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
+  <div class="content-wrapper bg-white">
     <!-- Content Header (Page header) -->
     @yield('content')
     <!-- /.content -->
