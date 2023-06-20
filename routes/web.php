@@ -54,12 +54,14 @@ Route::post('proposal/update', [Controllers\ProposalController::class, 'update']
 Route::delete('/proposal/destroy/{id}', [Controllers\ProposalController::class, 'destroy'])->name('proposal.destroy');
 Route::get('/proposal/edit/{id}', [Controllers\ProposalController::class, 'edit'])->name('proposal.edit');
 
-Route::get('/home', [Controllers\ClubController::class, 'index'])->name('home');
+Route::get('/club', [Controllers\ClubController::class, 'index'])->name('club');
 Route::post('/club/store', [Controllers\ClubController::class, 'store'])->name('club.store');
 Route::post('club/update', [Controllers\ClubController::class, 'update']);
 Route::delete('/club/destroy/{id}', [Controllers\ClubController::class, 'destroy'])->name('club.destroy');
 Route::get('/club/edit/{id}', [Controllers\ClubController::class, 'edit'])->name('club.edit');
 
+Route::get('/club-dashboard', [Controllers\ClubDashboardController::class, 'index'])->name('club-dashboard');
+Route::get('/management-dashboard', [Controllers\ManagementDashboardController::class, 'index'])->name('management-dashboard');
 
 Route::post('/activity/store', [Controllers\ActivityController::class, 'store'])->name('activity.store');
 Route::get('/activity/create', [Controllers\ActivityController::class, 'create'])->name('activity.create');

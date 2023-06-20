@@ -12,7 +12,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
   <title>Club Management System</title>
   <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="{{ asset('plugins/fontawesome-free/css/all.min.css')}}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="{{ asset('dist/css/adminlte.min.css')}}">
   <!-- Google Font: Source Sans Pro -->
@@ -122,13 +122,19 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
                <li class="nav-item">
-                <a href="{{ url('/dashboard') }}" class="nav-link {{ Request::is('dashboard') ? 'active' : '' }}">
+                <a href="{{ url('/club-dashboard') }}" class="nav-link {{ Request::is('club-dashboard') ? 'active' : '' }}">
                   <i class="fas fa-home nav-icon text-blue"></i>
-                  <p>Dashboard</p>
+                  <p>Club Dashboard</p>
+                </a>
+              </li>
+               <li class="nav-item">
+                <a href="{{ url('/management-dashboard') }}" class="nav-link {{ Request::is('management-dashboard') ? 'active' : '' }}">
+                  <i class="fas fa-home nav-icon text-blue"></i>
+                  <p>Management Dashboard</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{{ url('/home') }}" class="nav-link {{ Request::is('home') ? 'active' : '' }}">
+                <a href="{{ url('/club') }}" class="nav-link {{ Request::is('club') ? 'active' : '' }}">
                   <i class="fas fa-dumbbell nav-icon text-white"></i>
                   <p>Club & Activities</p>
                 </a>

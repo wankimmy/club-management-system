@@ -104,7 +104,7 @@ class ClubController extends Controller
        ]);
 
        toastr()->success('Club has been updated successfully!');
-      return redirect('/home');
+      return redirect('/club');
     }
 
     /**
