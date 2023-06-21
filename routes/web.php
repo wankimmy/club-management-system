@@ -55,13 +55,25 @@ Route::delete('/proposal/destroy/{id}', [Controllers\ProposalController::class, 
 Route::get('/proposal/edit/{id}', [Controllers\ProposalController::class, 'edit'])->name('proposal.edit');
 
 Route::get('/club', [Controllers\ClubController::class, 'index'])->name('club');
+Route::get('/club-activity', [Controllers\ClubActivityController::class, 'index'])->name('club-activity');
 Route::post('/club/store', [Controllers\ClubController::class, 'store'])->name('club.store');
 Route::post('club/update', [Controllers\ClubController::class, 'update']);
 Route::delete('/club/destroy/{id}', [Controllers\ClubController::class, 'destroy'])->name('club.destroy');
 Route::get('/club/edit/{id}', [Controllers\ClubController::class, 'edit'])->name('club.edit');
 
+Route::get('/managementclub', [Controllers\ManagementClubController::class, 'index'])->name('managementclub');
+Route::get('/management-activity', [Controllers\ManagementActivityController::class, 'index'])->name('management-activity');
+
+Route::get('/adminclub', [Controllers\AdminClubController::class, 'index'])->name('adminclub');
+Route::get('/admin-activity', [Controllers\AdminActivityController::class, 'index'])->name('admin-activity');
+
+Route::get('/studentclub', [Controllers\StudentClubController::class, 'index'])->name('studentclub');
+Route::get('/student-activity', [Controllers\StudentActivityController::class, 'index'])->name('student-activity');
+
 Route::get('/club-dashboard', [Controllers\ClubDashboardController::class, 'index'])->name('club-dashboard');
 Route::get('/management-dashboard', [Controllers\ManagementDashboardController::class, 'index'])->name('management-dashboard');
+Route::get('/super-dashboard', [Controllers\SuperDashboardController::class, 'index'])->name('super-dashboard');
+Route::get('/student-dashboard', [Controllers\StudentDashboardController::class, 'index'])->name('student-dashboard');
 
 Route::post('/activity/store', [Controllers\ActivityController::class, 'store'])->name('activity.store');
 Route::get('/activity/create', [Controllers\ActivityController::class, 'create'])->name('activity.create');
