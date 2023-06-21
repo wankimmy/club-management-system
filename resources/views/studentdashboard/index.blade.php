@@ -42,7 +42,7 @@
                     <b>Rank</b> <a class="float-right">27</a>
                   </li>
                   <li class="list-group-item">
-                    <b>Connection</b> <a class="float-right">1,287</a>
+                    <b>Followers</b> <a class="float-right">1,287</a>
                   </li>
                 </ul>
 
@@ -97,14 +97,14 @@
           <div class="col-md-9">
               <div class="container-fluid">
                 <div class="row">
-                  <div class="col-lg-3 col-6">
+                  <div class="col-lg-4 col-8">
                     <div class="small-box bg-info">
                       <div class="inner">
-                        <h3>44</h3>
-                        <p>Total Club</p>
+                        <h3>3</h3>
+                        <p>Club Joined</p>
                       </div>
                       <div class="icon"> 
-                        <i class="fas fa-school"></i> 
+                        <i class="fa-solid fa-sitemap"></i> 
                       </div> 
                       <a href="#" class="small-box-footer">More info 
                         <i class="fas fa-arrow-circle-right"></i>
@@ -112,14 +112,14 @@
                       </div>
                   </div>
 
-                  <div class="col-lg-3 col-6">
+                  <div class="col-lg-4 col-8">
                     <div class="small-box bg-success">
                       <div class="inner">
-                        <h3>100</sup></h3>
-                        <p>Total Event Creator</p>
+                        <h3>10</sup></h3>
+                        <p>Activities Joined</p>
                       </div>
                         <div class="icon"> 
-                          <i class="fas fa-users"></i> 
+                          <i class="fa-solid fa-dumbbell"></i> 
                         </div> 
                         <a href="#" class="small-box-footer">More info 
                           <i class="fas fa-arrow-circle-right"></i>
@@ -127,27 +127,14 @@
                     </div>
                   </div>
 
-                  <div class="col-lg-3 col-6">
+                  <div class="col-lg-4 col-8">
                     <div class="small-box bg-warning">
                       <div class="inner">
-                        <h3>RM 288,888</h3>
-                        <p>Transaction Volume</p>
+                        <h3>3</h3>
+                        <p>Event Participation</p>
                       </div>
                       <div class="icon">
-                        <i class="fa-solid fa-dollar-sign"></i>  
-                      </div> <a href="#" class="small-box-footer">More info 
-                        <i class="fas fa-arrow-circle-right"></i>
-                      </a> 
-                    </div>
-                  </div>
-                  <div class="col-lg-3 col-6">
-                    <div class="small-box bg-danger">
-                      <div class="inner">
-                        <h3>8,828</h3>
-                        <p>Total Event</p>
-                      </div>
-                      <div class="icon"> 
-                        <i class="fa-solid fa-calendar"></i> 
+                        <i class="fa-solid fa-calendar"></i>  
                       </div> <a href="#" class="small-box-footer">More info 
                         <i class="fas fa-arrow-circle-right"></i>
                       </a> 
@@ -157,19 +144,19 @@
 
 
                 <div class="row">
-                  <div class="col-md-8">
+                  <div class="col-md-12">
                     <div class="card">
                       <div class="card-header">
-                        <h3 class="card-title">
-                          <i class="fas fa-chart-pie mr-1"></i>
-                          Sales
+                        <h3 class="card-title mr-2">
+                          <i class="fa-sharp fa-solid fa-circle-info mr-1"></i>
+                          Information Board
                         </h3>
                         <div class="card-tools">
                           <ul class="nav nav-pills ml-auto">
-                            <li class="nav-item"> <a class="nav-link active" href="#revenue-chart" data-toggle="tab">Total Club</a> </li>
-                            <li class="nav-item"> <a class="nav-link" href="#sales-chart" data-toggle="tab">Total Event Creator</a> </li>
-                            <li class="nav-item"> <a class="nav-link" href="#revenue-chart" data-toggle="tab">Transaction Volume</a> </li>
-                            <li class="nav-item"> <a class="nav-link" href="#sales-chart" data-toggle="tab">Users</a> </li>
+                            <li class="nav-item"> <a class="nav-link active" href="#revenue-chart" data-toggle="tab">Events</a> </li>
+                            <li class="nav-item"> <a class="nav-link" href="#sales-chart" data-toggle="tab">Club Activities</a> </li>
+                            <li class="nav-item"> <a class="nav-link" href="#revenue-chart" data-toggle="tab">Club Announcement</a> </li>
+                            <li class="nav-item"> <a class="nav-link" href="#sales-chart" data-toggle="tab">System Updates</a> </li>
                           </ul>
                         </div>
                       </div>
@@ -187,53 +174,80 @@
                     </div>
                   </div>
 
-
-                  <div class="col-md-4">
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
                     <div class="card">
                       <div class="card-header">
-                        <h3 class="card-title mb-3">
-                          Approval Application Events
-                        </h3>
-                        <br>
-                        <div class="info-box mb-3 bg-success"> 
-                          <span class="info-box-icon">
-                            <i class="fa-solid fa-check"></i>
-                          </span>
-                          <div class="info-box-content"> 
-                            <span class="info-box-text">Approved</span> 
-                            <span class="info-box-number">50</span> 
-                          </div>
+                        <h3 class="card-title">Latest Connections</h3>
+
+                        <div class="card-tools">
+                          <span class="badge badge-info">8 New followers</span>
+                          <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                            <i class="fas fa-minus"></i>
+                          </button>
+                          <button type="button" class="btn btn-tool" data-card-widget="remove">
+                            <i class="fas fa-times"></i>
+                          </button>
                         </div>
-                        <div class="info-box mb-3 bg-warning"> 
-                          <span class="info-box-icon">
-                            <i class="fa-solid fa-hourglass-start"></i>
-                          </span>
-                          <div class="info-box-content"> 
-                            <span class="info-box-text">Pending</span> 
-                            <span class="info-box-number">46</span> 
-                          </div>
-                        </div>
-                        <div class="info-box mb-3 bg-danger"> 
-                          <span class="info-box-icon">
-                            <i class="fa-solid fa-circle-xmark"></i>
-                          </span>
-                          <div class="info-box-content"> 
-                            <span class="info-box-text">Rejected</span> 
-                            <span class="info-box-number">23</span> 
-                          </div>
-                        </div>
+                      </div>
+                      <div class="card-body p-0">
+                        <ul class="users-list clearfix">
+                          <li>
+                            <img src="dist/img/user1-128x128.jpg" alt="User Image">
+                            <a class="users-list-name" href="#">Alexander Pierce</a>
+                            <span class="users-list-date">Today</span>
+                          </li>
+                          <li>
+                            <img src="dist/img/user8-128x128.jpg" alt="User Image">
+                            <a class="users-list-name" href="#">Norman</a>
+                            <span class="users-list-date">Yesterday</span>
+                          </li>
+                          <li>
+                            <img src="dist/img/user7-128x128.jpg" alt="User Image">
+                            <a class="users-list-name" href="#">Jane</a>
+                            <span class="users-list-date">12 Jan</span>
+                          </li>
+                          <li>
+                            <img src="dist/img/user6-128x128.jpg" alt="User Image">
+                            <a class="users-list-name" href="#">John</a>
+                            <span class="users-list-date">12 Jan</span>
+                          </li>
+                          <li>
+                            <img src="dist/img/user2-160x160.jpg" alt="User Image">
+                            <a class="users-list-name" href="#">Alexander</a>
+                            <span class="users-list-date">13 Jan</span>
+                          </li>
+                          <li>
+                            <img src="dist/img/user5-128x128.jpg" alt="User Image">
+                            <a class="users-list-name" href="#">Sarah</a>
+                            <span class="users-list-date">14 Jan</span>
+                          </li>
+                          <li>
+                            <img src="dist/img/user4-128x128.jpg" alt="User Image">
+                            <a class="users-list-name" href="#">Nora</a>
+                            <span class="users-list-date">15 Jan</span>
+                          </li>
+                          <li>
+                            <img src="dist/img/user3-128x128.jpg" alt="User Image">
+                            <a class="users-list-name" href="#">Nadia</a>
+                            <span class="users-list-date">15 Jan</span>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="card-footer text-center">
+                        <a href="javascript:">View All Users</a>
                       </div>
                     </div>
                   </div>
+                </div>  
 
-
-                </div>
               </div>
-            <!-- /.card -->
+
           </div>
-          <!-- /.col -->
+
         </div>
-        <!-- /.row -->
-      </div><!-- /.container-fluid -->
+
+      </div>
     </section>
 @endsection

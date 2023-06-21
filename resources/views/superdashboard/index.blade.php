@@ -66,7 +66,7 @@
 
     <div class="row">
       <div class="col-12 col-sm-6 col-md-3">
-        <div class="info-box bg-gray">
+        <div class="info-box">
           <span class="info-box-icon bg-lightblue elevation-1"><i class="fas fa-server"></i></span>
           <div class="info-box-content">
             <span class="info-box-text">Server Status</span>
@@ -75,7 +75,7 @@
         </div>
       </div>
       <div class="col-12 col-sm-6 col-md-3">
-        <div class="info-box bg-gray mb-3">
+        <div class="info-box mb-3">
           <span class="info-box-icon bg-lightblue elevation-1"><i class="fas fa-clock"></i></span>
           <div class="info-box-content">
             <span class="info-box-text">Uptime</span>
@@ -84,7 +84,7 @@
         </div>
       </div>
       <div class="col-12 col-sm-6 col-md-3">
-        <div class="info-box bg-gray mb-3">
+        <div class="info-box mb-3">
           <span class="info-box-icon bg-lightblue elevation-1"><i class="fas fa-exclamation-circle"></i></span>
           <div class="info-box-content">
             <span class="info-box-text">Error Rate</span>
@@ -93,7 +93,7 @@
         </div>
       </div>
       <div class="col-12 col-sm-6 col-md-3">
-        <div class="info-box bg-gray mb-3">
+        <div class="info-box mb-3">
           <span class="info-box-icon bg-lightblue elevation-1"><i class="fas fa-chart-line"></i></span>
           <div class="info-box-content">
             <span class="info-box-text">Performance</span>
@@ -108,7 +108,7 @@
       <div class="col-md-12">
         <div class="card">
 
-          <div class="card-header bg-gray">
+          <div class="card-header">
             <h5 class="card-title">
               <i class="fa-solid fa-chart-simple"></i>
                User Activities
@@ -135,7 +135,7 @@
             </div>
           </div>
 
-          <div class="card-body bg-gray">
+          <div class="card-body">
             <div class="row">
               <div class="col-md-8">
                 <p class="text-center">
@@ -181,7 +181,7 @@
             </div>
           </div>
 
-          <div class="card-footer bg-gray">
+          <div class="card-footer">
             <div class="row">
               <div class="col-sm-3 col-6">
                 <div class="description-block border-right">
@@ -221,7 +221,7 @@
 
       <div class="row">
         <div class="col-md-8">
-          <div class="card bg-gray">
+          <div class="card">
             <div class="card-header">
               <h3 class="card-title">
                 <i class="fa-solid fa-gear"></i>
@@ -230,16 +230,16 @@
               <div class="card-tools">
                 <ul class="nav nav-pills ml-auto">
                   <li class="nav-item">
-                    <a class="nav-link active text-white" href="#revenue-chart" data-toggle="tab">Recent Changes</a>
+                    <a class="nav-link active" href="#revenue-chart" data-toggle="tab">Recent Changes</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link text-white" href="#sales-chart" data-toggle="tab">User Activity</a>
+                    <a class="nav-link" href="#sales-chart" data-toggle="tab">User Activity</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link text-white" href="#revenue-chart" data-toggle="tab">System Logs</a>
+                    <a class="nav-link" href="#revenue-chart" data-toggle="tab">System Logs</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link text-white" href="#sales-chart" data-toggle="tab">Security Logs</a>
+                    <a class="nav-link" href="#sales-chart" data-toggle="tab">Security Logs</a>
                   </li>
                 </ul>
               </div>
@@ -259,7 +259,7 @@
         </div>
 
         <div class="col-md-4">
-          <div class="card bg-gray">
+          <div class="card">
             <div class="card-header">
               <h3 class="card-title">System Notifications</h3>
 
