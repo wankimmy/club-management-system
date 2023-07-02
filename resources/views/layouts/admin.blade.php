@@ -176,11 +176,17 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
                <li class="nav-item">
+                <a href="{{ url('/home') }}" class="nav-link {{ Request::is('home') ? 'active' : '' }}">
+                  <i class="fas fa-star nav-icon text-blue"></i>
+                  <p>Home</p>
+                </a>
+              </li>
+               <li class="nav-item">
                 <a href="{{ url('/club-dashboard') }}" class="nav-link {{ Request::is('club-dashboard') ? 'active' : '' }}">
                   <i class="fas fa-home nav-icon text-blue"></i>
                   <p>Club Dashboard</p>
                 </a>
-              </li>
+              </li>              
                <li class="nav-item">
                 <a href="{{ url('/super-dashboard') }}" class="nav-link {{ Request::is('super-dashboard') ? 'active' : '' }}">
                   <i class="fas fa-home nav-icon text-blue"></i>
@@ -291,7 +297,76 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     </a>
                   </li>
                 </ul>
-              </li>                                         
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="fa-solid fa-coins"></i>
+                  <p>
+                    Finance
+                    <i class="fas fa-angle-left right mr-3"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">              
+                   <li class="nav-item">
+                    <a href="{{ url('/adminclub') }}" class="nav-link {{ Request::is('adminclub') ? 'active' : '' }}">
+                      <i class="fa-solid fa-wallet"></i>
+                      <p> Finance Management</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="{{ url('/admin-activity') }}" class="nav-link {{ Request::is('admin-activity') ? 'active' : '' }}">
+                      <i class="fa-solid fa-chart-simple"></i>
+                      <p> Financial Report</p>
+                    </a>
+                  </li>                                    
+                </ul>
+              </li> 
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="fa-solid fa-coins"></i>
+                  <p>
+                    Management Finance
+                    <i class="fas fa-angle-left right mr-3"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">              
+                   <li class="nav-item">
+                    <a href="{{ url('/adminclub') }}" class="nav-link {{ Request::is('adminclub') ? 'active' : '' }}">
+                      <i class="fa-solid fa-wallet"></i>
+                      <p> Finance Management</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="{{ url('/admin-activity') }}" class="nav-link {{ Request::is('admin-activity') ? 'active' : '' }}">
+                      <i class="fa-solid fa-chart-simple"></i>
+                      <p> Financial Overview</p>
+                    </a>
+                  </li>                                    
+                </ul>
+              </li> 
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="fa-solid fa-coins"></i>
+                  <p>
+                    Club Admin Finance
+                    <i class="fas fa-angle-left right mr-3"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">              
+                   <li class="nav-item">
+                    <a href="{{ url('/adminclub') }}" class="nav-link {{ Request::is('adminclub') ? 'active' : '' }}">
+                      <i class="fa-solid fa-wallet"></i>
+                      <p> Finance Management</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="{{ url('/admin-activity') }}" class="nav-link {{ Request::is('admin-activity') ? 'active' : '' }}">
+                      <i class="fa-solid fa-chart-simple"></i>
+                      <p> Financial Report</p>
+                    </a>
+                  </li>                                    
+                </ul>
+              </li>                                                       
               <li class="nav-item">
                 <a href="{{ url('/vote') }}" class="nav-link {{ Request::is('vote') ? 'active' : '' }}">
                   <i class="fas fa-hand-point-up nav-icon text-warning"></i>

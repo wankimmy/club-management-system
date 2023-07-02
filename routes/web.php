@@ -25,6 +25,7 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/home', function () {
 })->name('home');
 
 
+Route::get('/home', [Controllers\HomepageController::class, 'index'])->name('homepage');
 
 Route::get('/vote', [Controllers\VoteController::class, 'index'])->name('index');
 Route::post('/vote/store', [Controllers\VoteController::class, 'store'])->name('vote.store');
