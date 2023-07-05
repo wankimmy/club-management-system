@@ -76,6 +76,18 @@ Route::get('/management-dashboard', [Controllers\ManagementDashboardController::
 Route::get('/super-dashboard', [Controllers\SuperDashboardController::class, 'index'])->name('super-dashboard');
 Route::get('/student-dashboard', [Controllers\StudentDashboardController::class, 'index'])->name('student-dashboard');
 
+Route::get('/create-event', [Controllers\CreateEventController::class, 'index'])->name('create-event');
+Route::get('/create-program', [Controllers\CreateProgramController::class, 'index'])->name('create-program');
+Route::get('/edit-event', [Controllers\EditEventController::class, 'index'])->name('edit-event');
+Route::get('/edit-program', [Controllers\EditProgramController::class, 'index'])->name('edit-program');
+Route::get('/view-event', [Controllers\ViewEventController::class, 'index'])->name('view-event');
+Route::get('/view-program', [Controllers\ViewProgramController::class, 'index'])->name('view-program');
+Route::get('/approval-event', [Controllers\ApprovalEventController::class, 'index'])->name('approval-event');
+Route::get('/approval-program', [Controllers\ApprovalProgramController::class, 'index'])->name('approval-program');
+Route::get('/participant-event', [Controllers\ParticipantEventController::class, 'index'])->name('participant-event');
+Route::get('/participant-program', [Controllers\ParticipantProgramController::class, 'index'])->name('participant-program');
+
+
 Route::post('/activity/store', [Controllers\ActivityController::class, 'store'])->name('activity.store');
 Route::get('/activity/create', [Controllers\ActivityController::class, 'create'])->name('activity.create');
 Route::get('/activity/show/{id}', [Controllers\ActivityController::class, 'show'])->name('activity.show');
@@ -83,3 +95,4 @@ Route::get('/activity/status/{id}/{status}', [Controllers\ActivityController::cl
 Route::post('activity/update', [Controllers\ActivityController::class, 'update']);
 Route::delete('/activity/destroy/{id}', [Controllers\ActivityController::class, 'destroy'])->name('activity.destroy');
 Route::get('/activity/edit/{id}', [Controllers\ActivityController::class, 'edit'])->name('activity.edit');
+

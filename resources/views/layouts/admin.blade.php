@@ -366,7 +366,78 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     </a>
                   </li>                                    
                 </ul>
-              </li>                                                       
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="fa-solid fa-coins"></i>
+                  <p>
+                    Event/Program
+                    <i class="fas fa-angle-left right mr-3"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">              
+                   <li class="nav-item">
+                    <a href="{{ url('/create-event') }}" class="nav-link {{ Request::is('create-event') ? 'active' : '' }}">
+                      <i class="fa-solid fa-wallet"></i>
+                      <p> Create Event</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="{{ url('/edit-event') }}" class="nav-link {{ Request::is('edit-event') ? 'active' : '' }}">
+                      <i class="fa-solid fa-chart-simple"></i>
+                      <p> Edit Event</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="{{ url('/view-event') }}" class="nav-link {{ Request::is('view-event') ? 'active' : '' }}">
+                      <i class="fa-solid fa-chart-simple"></i>
+                      <p> Event Detail</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="{{ url('/approval-event') }}" class="nav-link {{ Request::is('approval-event') ? 'active' : '' }}">
+                      <i class="fa-solid fa-chart-simple"></i>
+                      <p> Event Approval</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="{{ url('/participant-event') }}" class="nav-link {{ Request::is('participant-event') ? 'active' : '' }}">
+                      <i class="fa-solid fa-chart-simple"></i>
+                      <p> Event Participants</p>
+                    </a>
+                  </li> 
+                   <li class="nav-item">
+                    <a href="{{ url('/create-program') }}" class="nav-link {{ Request::is('create-program') ? 'active' : '' }}">
+                      <i class="fa-solid fa-wallet"></i>
+                      <p> Create Program</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="{{ url('/edit-program') }}" class="nav-link {{ Request::is('edit-program') ? 'active' : '' }}">
+                      <i class="fa-solid fa-chart-simple"></i>
+                      <p> Edit Program</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="{{ url('/view-program') }}" class="nav-link {{ Request::is('view-program') ? 'active' : '' }}">
+                      <i class="fa-solid fa-chart-simple"></i>
+                      <p> Program Detail</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="{{ url('/approval-program') }}" class="nav-link {{ Request::is('approval-program') ? 'active' : '' }}">
+                      <i class="fa-solid fa-chart-simple"></i>
+                      <p> Program Approval</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="{{ url('/participant-program') }}" class="nav-link {{ Request::is('participant-program') ? 'active' : '' }}">
+                      <i class="fa-solid fa-chart-simple"></i>
+                      <p> Program Participants</p>
+                    </a>
+                  </li>                                                        
+                </ul>
+              </li>
               <li class="nav-item">
                 <a href="{{ url('/vote') }}" class="nav-link {{ Request::is('vote') ? 'active' : '' }}">
                   <i class="fas fa-hand-point-up nav-icon text-warning"></i>
@@ -426,10 +497,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <footer class="main-footer">
     <!-- To the right -->
     <div class="float-right d-none d-sm-inline">
-      Rafiah Jawahir
+      YuniVent
     </div>
     <!-- Default to the left -->
-    <strong>Copyright &copy; 2020 <a href="#">UNIKL MIIT</a>.</strong> All rights reserved.
+    <strong>Copyright &copy; 2023 <a href="#">YUNIVENT</a>.</strong> All rights reserved.
   </footer>
 </div>
 <!-- ./wrapper -->
