@@ -1,6 +1,13 @@
 @extends('layouts.admin')
 @section('content')
 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tinymce@5.7.1/skins/ui/oxide/skin.min.css">
+<style>
+    .tox-notifications-container {
+        display: none;
+    }
+</style>
+
           <div class="col">
             <div class="card">
               <div class="card-header p-2">
@@ -14,6 +21,22 @@
                   <div class="tab-content">
                     <div class="active tab-pane" id="activity">
                       <!-- Post -->
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="card card-outline card-info">
+                          <div class="card-header">
+                            <h3 class="card-title">
+                              Post something
+                            </h3>
+                          </div>
+                          <!-- /.card-header -->
+                          <div class="card-body">
+                              <textarea id="editor"></textarea>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- /.col-->
+                    </div>
                       <div class="post">
                         <div class="user-block">
                           <img class="img-circle img-bordered-sm" src="../dist/img/user1-128x128.jpg" alt="user image">
@@ -392,4 +415,19 @@
                 </div>
             </div>
           </div>
+
+<script src="https://cdn.jsdelivr.net/npm/tinymce@5.7.1/tinymce.min.js"></script>
+
+<script>
+    // Initialize TinyMCE editor
+    tinymce.init({
+        selector: '#editor',
+        height: 300,
+        plugins: 'advlist autolink lists link image charmap print preview hr anchor pagebreak',
+        toolbar_mode: 'floating',
+        toolbar: 'undo redo | formatselect | bold italic underline | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image',
+        skin: 'oxide-dark',
+        content_css: 'https://cdn.jsdelivr.net/npm/tinymce@5.7.1/skins/content/default/content.min.css'
+    });
+</script>
 @endsection

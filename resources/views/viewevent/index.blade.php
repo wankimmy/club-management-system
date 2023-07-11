@@ -44,14 +44,40 @@
                   <div class="info-box bg-light">
                     <div class="info-box-content">
                       <span class="info-box-text text-center text-muted">Estimated budget</span>
-                      <span class="info-box-number text-center text-muted mb-0">2300</span>
+                      <span class="info-box-number text-center text-muted mb-0">NA</span>
                     </div>
                   </div>
                 </div>
                 <div class="col-12 col-sm-4">
                   <div class="info-box bg-light">
                     <div class="info-box-content">
-                      <span class="info-box-text text-center text-muted">Total amount spent</span>
+                      <span class="info-box-text text-center text-muted">Location</span>
+                      <span class="info-box-number text-center text-muted mb-0">Dewan Al-Ghazali, Fakulti Sains Komputer Dan Matematik</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-4">
+                  <div class="info-box bg-light">
+                    <div class="info-box-content">
+                      <span class="info-box-text text-center text-muted">Date</span>
+                      <span class="info-box-number text-center text-muted mb-0">22/1/2023 - 24/1/2023</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 col-sm-4">
+                  <div class="info-box bg-light">
+                    <div class="info-box-content">
+                      <span class="info-box-text text-center text-muted">Time</span>
+                      <span class="info-box-number text-center text-muted mb-0">10.30 am - 5.30 pm</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-4">
+                  <div class="info-box bg-light">
+                    <div class="info-box-content">
+                      <span class="info-box-text text-center text-muted">Total pax</span>
                       <span class="info-box-number text-center text-muted mb-0">2000</span>
                     </div>
                   </div>
@@ -59,96 +85,92 @@
                 <div class="col-12 col-sm-4">
                   <div class="info-box bg-light">
                     <div class="info-box-content">
-                      <span class="info-box-text text-center text-muted">Estimated project duration</span>
-                      <span class="info-box-number text-center text-muted mb-0">20</span>
+                      <span class="info-box-text text-center text-muted">Organizer Name</span>
+                      <span class="info-box-number text-center text-muted mb-0">Goodvibes</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 col-sm-6">
+                  <div class="info-box bg-light">
+                    <div class="info-box-content">
+                      <span class="info-box-text text-center text-muted">Participants/Attendees</span>
+                      <span class="info-box-number text-center text-muted mb-0">Open to all </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6">
+                  <div class="info-box bg-light">
+                    <div class="info-box-content">
+                      <span class="info-box-text text-center text-muted">Food and drinks</span>
+                      <span class="info-box-number text-center text-muted mb-0">Provided</span>
                     </div>
                   </div>
                 </div>
               </div>
               <div class="row">
                 <div class="col-12">
-                  <h4>Recent Activity</h4>
+                  <h4>Event Description</h4>
                     <div class="post">
-                      <div class="user-block">
-                        <img class="img-circle img-bordered-sm" src="../../dist/img/user1-128x128.jpg" alt="user image">
-                        <span class="username">
-                          <a href="#">Jonathan Burke Jr.</a>
-                        </span>
-                        <span class="description">Shared publicly - 7:45 PM today</span>
-                      </div>
-                      <!-- /.user-block -->
                       <p>
-                        Lorem ipsum represents a long-held tradition for designers,
-                        typographers and the like. Some people hate it and argue for
-                        its demise, but others ignore.
-                      </p>
-
-                      <p>
-                        <a href="#" class="link-black text-sm"><i class="fas fa-link mr-1"></i> Demo File 1 v2</a>
+                        Goodvibes is hosting an exhilarating musical festival, bringing together talented musicians, vibrant performances, and an electrifying atmosphere for students and music enthusiasts to immerse themselves in a celebration of music and culture.
                       </p>
                     </div>
 
-                    <div class="post clearfix">
-                      <div class="user-block">
-                        <img class="img-circle img-bordered-sm" src="../../dist/img/user7-128x128.jpg" alt="User Image">
-                        <span class="username">
-                          <a href="#">Sarah Ross</a>
-                        </span>
-                        <span class="description">Sent you a message - 3 days ago</span>
+                      <div class="post">
+                        <div class="row mb-3">
+                          <div class="col-sm-6">
+                            <img class="img-fluid" src="../dist/img/photo1.png" alt="Photo">
+                          </div>
+                          <!-- /.col -->
+                          <div class="col-sm-6">
+                            <div class="row">
+                              <div class="col-sm-6">
+                                <img class="img-fluid mb-3" src="../dist/img/photo2.png" alt="Photo">
+                                <img class="img-fluid" src="../dist/img/photo3.jpg" alt="Photo">
+                              </div>
+                              <!-- /.col -->
+                              <div class="col-sm-6">
+                                <img class="img-fluid mb-3" src="../dist/img/photo4.jpg" alt="Photo">
+                                <img class="img-fluid" src="../dist/img/photo1.png" alt="Photo">
+                              </div>
+                              <!-- /.col -->
+                            </div>
+                            <!-- /.row -->
+                          </div>
+                          <!-- /.col -->
+                        </div>
+                        <!-- /.row -->
                       </div>
-                      <!-- /.user-block -->
-                      <p>
-                        Lorem ipsum represents a long-held tradition for designers,
-                        typographers and the like. Some people hate it and argue for
-                        its demise, but others ignore.
-                      </p>
-                      <p>
-                        <a href="#" class="link-black text-sm"><i class="fas fa-link mr-1"></i> Demo File 2</a>
-                      </p>
-                    </div>
-
-                    <div class="post">
-                      <div class="user-block">
-                        <img class="img-circle img-bordered-sm" src="../../dist/img/user1-128x128.jpg" alt="user image">
-                        <span class="username">
-                          <a href="#">Jonathan Burke Jr.</a>
-                        </span>
-                        <span class="description">Shared publicly - 5 days ago</span>
-                      </div>
-                      <!-- /.user-block -->
-                      <p>
-                        Lorem ipsum represents a long-held tradition for designers,
-                        typographers and the like. Some people hate it and argue for
-                        its demise, but others ignore.
-                      </p>
-
-                      <p>
-                        <a href="#" class="link-black text-sm"><i class="fas fa-link mr-1"></i> Demo File 1 v1</a>
-                      </p>
-                    </div>
                 </div>
               </div>
             </div>
             <div class="col-12 col-md-12 col-lg-4 order-1 order-md-2">
-              <h3 class="text-primary"><i class="fas fa-paint-brush"></i> AdminLTE v3</h3>
-              <p class="text-muted">Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terr.</p>
+              <h3 class="text-primary"></i> Goodvibes</h3>
               <br>
               <div class="text-muted">
-                <p class="text-sm">Client Company
-                  <b class="d-block">Deveint Inc</b>
+                <p class="text-sm">Organizer Description
+                  <b class="d-block">Event Company</b>
                 </p>
-                <p class="text-sm">Project Leader
-                  <b class="d-block">Tony Chicken</b>
+                <p class="text-sm">Name of Organizer representative/in-charge
+                  <b class="d-block">Kamal Awang</b>
+                </p>
+                <p class="text-sm">Contact Phone Number
+                  <b class="d-block">+601123234545</b>
+                </p>
+                <p class="text-sm">Contact Email
+                  <b class="d-block">kamal@goodvibes.com</b>
                 </p>
               </div>
 
               <h5 class="mt-5 text-muted">Project files</h5>
               <ul class="list-unstyled">
                 <li>
-                  <a href="" class="btn-link text-secondary"><i class="far fa-fw fa-file-word"></i> Functional-requirements.docx</a>
+                  <a href="" class="btn-link text-secondary"><i class="far fa-fw fa-file-word"></i> Venuebooking.docx</a>
                 </li>
                 <li>
-                  <a href="" class="btn-link text-secondary"><i class="far fa-fw fa-file-pdf"></i> UAT.pdf</a>
+                  <a href="" class="btn-link text-secondary"><i class="far fa-fw fa-file-pdf"></i> Tentative.pdf</a>
                 </li>
                 <li>
                   <a href="" class="btn-link text-secondary"><i class="far fa-fw fa-envelope"></i> Email-from-flatbal.mln</a>
@@ -157,12 +179,11 @@
                   <a href="" class="btn-link text-secondary"><i class="far fa-fw fa-image "></i> Logo.png</a>
                 </li>
                 <li>
-                  <a href="" class="btn-link text-secondary"><i class="far fa-fw fa-file-word"></i> Contract-10_12_2014.docx</a>
+                  <a href="" class="btn-link text-secondary"><i class="far fa-fw fa-file-word"></i> approval.docx</a>
                 </li>
               </ul>
               <div class="text-center mt-5 mb-3">
-                <a href="#" class="btn btn-sm btn-primary">Add files</a>
-                <a href="#" class="btn btn-sm btn-warning">Report contact</a>
+                <a href="#" class="btn btn-sm btn-primary">Edit Detail</a>
               </div>
             </div>
           </div>
@@ -173,7 +194,7 @@
 
     </section>
 
-        <section class="content">
+    <section class="content">
 
       <!-- Default box -->
       <div class="card">
@@ -197,14 +218,40 @@
                   <div class="info-box bg-light">
                     <div class="info-box-content">
                       <span class="info-box-text text-center text-muted">Estimated budget</span>
-                      <span class="info-box-number text-center text-muted mb-0">2300</span>
+                      <span class="info-box-number text-center text-muted mb-0">NA</span>
                     </div>
                   </div>
                 </div>
                 <div class="col-12 col-sm-4">
                   <div class="info-box bg-light">
                     <div class="info-box-content">
-                      <span class="info-box-text text-center text-muted">Total amount spent</span>
+                      <span class="info-box-text text-center text-muted">Location</span>
+                      <span class="info-box-number text-center text-muted mb-0">Dewan Al-Ghazali, Fakulti Sains Komputer Dan Matematik</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-4">
+                  <div class="info-box bg-light">
+                    <div class="info-box-content">
+                      <span class="info-box-text text-center text-muted">Date</span>
+                      <span class="info-box-number text-center text-muted mb-0">26/2/2023</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 col-sm-4">
+                  <div class="info-box bg-light">
+                    <div class="info-box-content">
+                      <span class="info-box-text text-center text-muted">Time</span>
+                      <span class="info-box-number text-center text-muted mb-0">10.30 am - 5.30 pm</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-4">
+                  <div class="info-box bg-light">
+                    <div class="info-box-content">
+                      <span class="info-box-text text-center text-muted">Total pax</span>
                       <span class="info-box-number text-center text-muted mb-0">2000</span>
                     </div>
                   </div>
@@ -212,96 +259,92 @@
                 <div class="col-12 col-sm-4">
                   <div class="info-box bg-light">
                     <div class="info-box-content">
-                      <span class="info-box-text text-center text-muted">Estimated project duration</span>
-                      <span class="info-box-number text-center text-muted mb-0">20</span>
+                      <span class="info-box-text text-center text-muted">Organizer Name</span>
+                      <span class="info-box-number text-center text-muted mb-0">Computer Science Club</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 col-sm-6">
+                  <div class="info-box bg-light">
+                    <div class="info-box-content">
+                      <span class="info-box-text text-center text-muted">Participants/Attendees</span>
+                      <span class="info-box-number text-center text-muted mb-0">Uitm Students </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6">
+                  <div class="info-box bg-light">
+                    <div class="info-box-content">
+                      <span class="info-box-text text-center text-muted">Food and drinks</span>
+                      <span class="info-box-number text-center text-muted mb-0">Provided</span>
                     </div>
                   </div>
                 </div>
               </div>
               <div class="row">
                 <div class="col-12">
-                  <h4>Recent Activity</h4>
+                  <h4>Event Description</h4>
                     <div class="post">
-                      <div class="user-block">
-                        <img class="img-circle img-bordered-sm" src="../../dist/img/user1-128x128.jpg" alt="user image">
-                        <span class="username">
-                          <a href="#">Jonathan Burke Jr.</a>
-                        </span>
-                        <span class="description">Shared publicly - 7:45 PM today</span>
-                      </div>
-                      <!-- /.user-block -->
                       <p>
-                        Lorem ipsum represents a long-held tradition for designers,
-                        typographers and the like. Some people hate it and argue for
-                        its demise, but others ignore.
-                      </p>
-
-                      <p>
-                        <a href="#" class="link-black text-sm"><i class="fas fa-link mr-1"></i> Demo File 1 v2</a>
+                        Computer Science club is hosting an exhilarating musical festival, bringing together talented musicians, vibrant performances, and an electrifying atmosphere for students and music enthusiasts to immerse themselves in a celebration of music and culture.
                       </p>
                     </div>
 
-                    <div class="post clearfix">
-                      <div class="user-block">
-                        <img class="img-circle img-bordered-sm" src="../../dist/img/user7-128x128.jpg" alt="User Image">
-                        <span class="username">
-                          <a href="#">Sarah Ross</a>
-                        </span>
-                        <span class="description">Sent you a message - 3 days ago</span>
+                      <div class="post">
+                        <div class="row mb-3">
+                          <div class="col-sm-6">
+                            <img class="img-fluid" src="../dist/img/photo1.png" alt="Photo">
+                          </div>
+                          <!-- /.col -->
+                          <div class="col-sm-6">
+                            <div class="row">
+                              <div class="col-sm-6">
+                                <img class="img-fluid mb-3" src="../dist/img/photo2.png" alt="Photo">
+                                <img class="img-fluid" src="../dist/img/photo3.jpg" alt="Photo">
+                              </div>
+                              <!-- /.col -->
+                              <div class="col-sm-6">
+                                <img class="img-fluid mb-3" src="../dist/img/photo4.jpg" alt="Photo">
+                                <img class="img-fluid" src="../dist/img/photo1.png" alt="Photo">
+                              </div>
+                              <!-- /.col -->
+                            </div>
+                            <!-- /.row -->
+                          </div>
+                          <!-- /.col -->
+                        </div>
+                        <!-- /.row -->
                       </div>
-                      <!-- /.user-block -->
-                      <p>
-                        Lorem ipsum represents a long-held tradition for designers,
-                        typographers and the like. Some people hate it and argue for
-                        its demise, but others ignore.
-                      </p>
-                      <p>
-                        <a href="#" class="link-black text-sm"><i class="fas fa-link mr-1"></i> Demo File 2</a>
-                      </p>
-                    </div>
-
-                    <div class="post">
-                      <div class="user-block">
-                        <img class="img-circle img-bordered-sm" src="../../dist/img/user1-128x128.jpg" alt="user image">
-                        <span class="username">
-                          <a href="#">Jonathan Burke Jr.</a>
-                        </span>
-                        <span class="description">Shared publicly - 5 days ago</span>
-                      </div>
-                      <!-- /.user-block -->
-                      <p>
-                        Lorem ipsum represents a long-held tradition for designers,
-                        typographers and the like. Some people hate it and argue for
-                        its demise, but others ignore.
-                      </p>
-
-                      <p>
-                        <a href="#" class="link-black text-sm"><i class="fas fa-link mr-1"></i> Demo File 1 v1</a>
-                      </p>
-                    </div>
                 </div>
               </div>
             </div>
             <div class="col-12 col-md-12 col-lg-4 order-1 order-md-2">
-              <h3 class="text-primary"><i class="fas fa-paint-brush"></i> AdminLTE v3</h3>
-              <p class="text-muted">Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terr.</p>
+              <h3 class="text-primary"></i> Uitm Fiesta</h3>
               <br>
               <div class="text-muted">
-                <p class="text-sm">Client Company
-                  <b class="d-block">Deveint Inc</b>
+                <p class="text-sm">Organizer Description
+                  <b class="d-block">Computer Science Club</b>
                 </p>
-                <p class="text-sm">Project Leader
-                  <b class="d-block">Tony Chicken</b>
+                <p class="text-sm">Name of Organizer representative/in-charge
+                  <b class="d-block">Kamal Awang</b>
+                </p>
+                <p class="text-sm">Contact Phone Number
+                  <b class="d-block">+601123234545</b>
+                </p>
+                <p class="text-sm">Contact Email
+                  <b class="d-block">kamal@student.com</b>
                 </p>
               </div>
 
               <h5 class="mt-5 text-muted">Project files</h5>
               <ul class="list-unstyled">
                 <li>
-                  <a href="" class="btn-link text-secondary"><i class="far fa-fw fa-file-word"></i> Functional-requirements.docx</a>
+                  <a href="" class="btn-link text-secondary"><i class="far fa-fw fa-file-word"></i> Venuebooking.docx</a>
                 </li>
                 <li>
-                  <a href="" class="btn-link text-secondary"><i class="far fa-fw fa-file-pdf"></i> UAT.pdf</a>
+                  <a href="" class="btn-link text-secondary"><i class="far fa-fw fa-file-pdf"></i> Tentative.pdf</a>
                 </li>
                 <li>
                   <a href="" class="btn-link text-secondary"><i class="far fa-fw fa-envelope"></i> Email-from-flatbal.mln</a>
@@ -310,12 +353,11 @@
                   <a href="" class="btn-link text-secondary"><i class="far fa-fw fa-image "></i> Logo.png</a>
                 </li>
                 <li>
-                  <a href="" class="btn-link text-secondary"><i class="far fa-fw fa-file-word"></i> Contract-10_12_2014.docx</a>
+                  <a href="" class="btn-link text-secondary"><i class="far fa-fw fa-file-word"></i> approval.docx</a>
                 </li>
               </ul>
               <div class="text-center mt-5 mb-3">
-                <a href="#" class="btn btn-sm btn-primary">Add files</a>
-                <a href="#" class="btn btn-sm btn-warning">Report contact</a>
+                <a href="#" class="btn btn-sm btn-primary">Edit Detail</a>
               </div>
             </div>
           </div>

@@ -19,7 +19,14 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-right">
-                <button class="bg-black hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow" href="{{ url('activity/create') }}"> Choose event</button>
+              <div class="form-group">
+                <label for="inputStatus">Choose event:</label>
+                <select id="inputStatus" class="form-control custom-select">
+                  <option selected disabled>Select one</option>
+                  <option>Goodvibes</option>
+                  <option>UiTM Fiesta</option>
+                </select>
+              </div>
             </div>
         </div>
     </div>

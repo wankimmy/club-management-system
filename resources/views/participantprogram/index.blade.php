@@ -5,7 +5,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark" style="font-weight: bold;"> Management</h1>
+            <h1 class="m-0 text-dark" style="font-weight: bold;">Participants</h1>
           </div>
           
         </div>
@@ -19,7 +19,14 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-right">
-                <button class="bg-black hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow" href="{{ url('activity/create') }}"> Create New Club</button>
+              <div class="form-group">
+                <label for="inputStatus">Choose event:</label>
+                <select id="inputStatus" class="form-control custom-select">
+                  <option selected disabled>Select one</option>
+                  <option>Goodvibes</option>
+                  <option>UiTM Fiesta</option>
+                </select>
+              </div>
             </div>
         </div>
     </div>

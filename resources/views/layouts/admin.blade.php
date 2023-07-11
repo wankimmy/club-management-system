@@ -186,7 +186,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   <i class="fas fa-home nav-icon text-blue"></i>
                   <p>Club Dashboard</p>
                 </a>
-              </li>              
+              </li>
+               <li class="nav-item">
+                <a href="{{ url('/organization-dashboard') }}" class="nav-link {{ Request::is('organization-dashboard') ? 'active' : '' }}">
+                  <i class="fas fa-home nav-icon text-blue"></i>
+                  <p>Organization Dashboard</p>
+                </a>
+              </li>               
                <li class="nav-item">
                 <a href="{{ url('/super-dashboard') }}" class="nav-link {{ Request::is('super-dashboard') ? 'active' : '' }}">
                   <i class="fas fa-home nav-icon text-blue"></i>
@@ -198,6 +204,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <a href="{{ url('/student-dashboard') }}" class="nav-link {{ Request::is('student-dashboard') ? 'active' : '' }}">
                   <i class="fas fa-home nav-icon text-blue"></i>
                   <p>Student Dashboard</p>
+                </a>
+              </li>
+               <li class="nav-item">
+                <a href="{{ url('/profileview') }}" class="nav-link {{ Request::is('profileview') ? 'active' : '' }}">
+                  <i class="fas fa-home nav-icon text-blue"></i>
+                  <p>Profile View</p>
                 </a>
               </li>                            
                <li class="nav-item">

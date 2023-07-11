@@ -38,19 +38,16 @@
                        alt="User profile picture">
                 </div>
 
-                <h3 class="profile-username text-center">Nina Abu Seman</h3>
+                <h3 class="profile-username text-center">Yunivent</h3>
 
-                <p class="text-muted text-center">UiTM</p>
+                <p class="text-muted text-center">Organization</p>
 
                 <ul class="list-group list-group-unbordered mb-3">
                   <li class="list-group-item">
-                    <b>Year</b> <a class="float-right">2</a>
+                    <b>Jobs Offered</b> <a class="float-right">27</a>
                   </li>
                   <li class="list-group-item">
-                    <b>Rank</b> <a class="float-right">27</a>
-                  </li>
-                  <li class="list-group-item">
-                    <b>Followers</b> <a class="float-right">1,287</a>
+                    <b>Followers</b> <a class="float-right">10,287</a>
                   </li>
                 </ul>
 
@@ -61,44 +58,48 @@
             <!-- /.card -->
 
             <!-- About Me Box -->
-            <div class="card card-lightblue">
-              <div class="card-header">
-                <h3 class="card-title">About Me</h3>
-              </div>
-              <!-- /.card-header -->
-              <div class="card-body">
-                <strong><i class="fas fa-book mr-1"></i> Education</strong>
-
-                <p class="text-muted">
-                  B.S. in Computer Science from Universiti Teknologi MARA
-                </p>
-
-                <hr>
-
-                <strong><i class="fas fa-map-marker-alt mr-1"></i> Location</strong>
-
-                <p class="text-muted">Shah Alam, Selangor</p>
-
-                <hr>
-
-                <strong><i class="fas fa-pencil-alt mr-1"></i> Skills</strong>
-
-                <p class="text-muted">
-                  <span class="tag tag-danger">UI Design</span>
-                  <span class="tag tag-success">Coding</span>
-                  <span class="tag tag-info">Javascript</span>
-                  <span class="tag tag-warning">PHP</span>
-                  <span class="tag tag-primary">Node.js</span>
-                </p>
-
-                <hr>
-
-                <strong><i class="far fa-file-alt mr-1"></i> Bio</strong>
-
-                <p class="text-muted">Lurve to learn</p>
-              </div>
-              <!-- /.card-body -->
+          <div class="card card-lightblue">
+            <div class="card-header">
+              <h3 class="card-title">About</h3>
             </div>
+            <!-- /.card-header -->
+            <div class="card-body">
+              <strong><i class="fas fa-building mr-1"></i> Organization Type</strong>
+              <p class="text-muted">Corporate</p>
+              
+              <hr>
+              
+              <strong><i class="fas fa-info-circle mr-1"></i> Organization Description</strong>
+              <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod erat vel ante tristique, nec semper risus posuere. Vestibulum vitae tellus eu metus elementum interdum.</p>
+              
+              <hr>
+              
+              <strong><i class="fas fa-envelope mr-1"></i> Email</strong>
+              <p class="text-muted">hq.yunivent@gmail.com</p>
+              
+              <hr>
+              
+              <strong><i class="fas fa-phone mr-1"></i> Phone</strong>
+              <p class="text-muted">+03 456-7890</p>
+              
+              <hr>
+              
+              <strong><i class="fas fa-map-marker-alt mr-1"></i> Office Address</strong>
+              <p class="text-muted">123 Main Street, City, State, ZIP Code</p>
+              
+              <hr>
+
+              <strong><i class="fas fa-map-marker-alt mr-1"></i> Location</strong>
+              <p class="text-muted">Petaling Jaya, Selangor</p>
+
+              <hr>
+
+              <strong><i class="far fa-file-alt mr-1"></i> Bio</strong>
+              <p class="text-muted">Explore . Collaborate. Achieve</p>
+            </div>
+            <!-- /.card-body -->
+          </div>
+
             <!-- /.card -->
           </div>
           <!-- /.col -->
@@ -109,7 +110,7 @@
                     <div class="small-box bg-info">
                       <div class="inner">
                         <h3>3</h3>
-                        <p>Club Joined</p>
+                        <p>Active Events</p>
                       </div>
                       <div class="icon"> 
                         <i class="fa-solid fa-sitemap"></i> 
@@ -124,7 +125,7 @@
                     <div class="small-box bg-success">
                       <div class="inner">
                         <h3>10</sup></h3>
-                        <p>Activities Joined</p>
+                        <p>Programs</p>
                       </div>
                         <div class="icon"> 
                           <i class="fa-solid fa-dumbbell"></i> 
@@ -139,7 +140,7 @@
                     <div class="small-box bg-warning">
                       <div class="inner">
                         <h3>3</h3>
-                        <p>Event Participation</p>
+                        <p>Events</p>
                       </div>
                       <div class="icon">
                         <i class="fa-solid fa-calendar"></i>  
@@ -149,7 +150,6 @@
                     </div>
                   </div>
                 </div>
-
 
                 <div class="row">
                   <div class="col-md-12">
@@ -162,8 +162,8 @@
                         <div class="card-tools">
                           <ul class="nav nav-pills ml-auto">
                             <li class="nav-item"> <a class="nav-link active" href="#revenue-chart" data-toggle="tab">Events</a> </li>
-                            <li class="nav-item"> <a class="nav-link" href="#sales-chart" data-toggle="tab">Club Activities</a> </li>
-                            <li class="nav-item"> <a class="nav-link" href="#revenue-chart" data-toggle="tab">Club Announcement</a> </li>
+                            <li class="nav-item"> <a class="nav-link" href="#sales-chart" data-toggle="tab">Programs</a> </li>
+                            <li class="nav-item"> <a class="nav-link" href="#revenue-chart" data-toggle="tab">Announcement</a> </li>
                             <li class="nav-item"> <a class="nav-link" href="#sales-chart" data-toggle="tab">System Updates</a> </li>
                           </ul>
                         </div>
@@ -266,12 +266,15 @@
                     </div>
                   </div>
                   <div class="col-md-12">
+                    <h2><b>Feed</b></h2>
+                  </div>
+                  <div class="col-md-12">
                     <!-- Box Comment -->
                     <div class="card card-widget">
                       <div class="card-header">
                         <div class="user-block">
                           <img class="img-circle" src="../dist/img/user4-128x128.jpg" alt="User Image">
-                          <span class="username"><a href="#">Nina Abu Seman</a></span>
+                          <span class="username"><a href="#">Yunivent</a></span>
                           <span class="description">Shared publicly - 7:30 PM Today</span>
                         </div>
                         <!-- /.user-block -->
@@ -377,7 +380,7 @@
                       <div class="card-header">
                         <div class="user-block">
                           <img class="img-circle" src="../dist/img/user4-128x128.jpg" alt="User Image">
-                          <span class="username"><a href="#">Nina Abu Seman</a></span>
+                          <span class="username"><a href="#">Yunivent</a></span>
                           <span class="description">Shared publicly - 7:30 PM Today</span>
                         </div>
                         <!-- /.user-block -->
@@ -476,8 +479,9 @@
                       <!-- /.card-footer -->
                     </div>
                     <!-- /.card -->
-                  </div> 
-                </div>  
+                  </div>  
+                </div>
+
 
               </div>
 

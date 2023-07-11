@@ -72,9 +72,11 @@ Route::get('/studentclub', [Controllers\StudentClubController::class, 'index'])-
 Route::get('/student-activity', [Controllers\StudentActivityController::class, 'index'])->name('student-activity');
 
 Route::get('/club-dashboard', [Controllers\ClubDashboardController::class, 'index'])->name('club-dashboard');
+Route::get('/organization-dashboard', [Controllers\OrganizationDashboardController::class, 'index'])->name('organization-dashboard');
 Route::get('/management-dashboard', [Controllers\ManagementDashboardController::class, 'index'])->name('management-dashboard');
 Route::get('/super-dashboard', [Controllers\SuperDashboardController::class, 'index'])->name('super-dashboard');
 Route::get('/student-dashboard', [Controllers\StudentDashboardController::class, 'index'])->name('student-dashboard');
+Route::get('/profileview', [Controllers\ProfileViewController::class, 'index'])->name('profileview');
 
 Route::get('/create-event', [Controllers\CreateEventController::class, 'index'])->name('create-event');
 Route::get('/create-program', [Controllers\CreateProgramController::class, 'index'])->name('create-program');
