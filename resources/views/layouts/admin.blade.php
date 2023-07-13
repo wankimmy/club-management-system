@@ -451,6 +451,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 </ul>
               </li>
               <li class="nav-item">
+                <a href="{{ url('/jobpage') }}" class="nav-link {{ Request::is('vote') ? 'active' : '' }}">
+                  <i class="fas fa-suitcase nav-icon text-info"></i>
+                  <p>Jobs</p>
+                </a>
+              </li>
+              <li class="nav-item">
                 <a href="{{ url('/vote') }}" class="nav-link {{ Request::is('vote') ? 'active' : '' }}">
                   <i class="fas fa-hand-point-up nav-icon text-warning"></i>
                   <p>Voting</p>

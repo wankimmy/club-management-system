@@ -71,6 +71,15 @@ Route::get('/admin-activity', [Controllers\AdminActivityController::class, 'inde
 Route::get('/studentclub', [Controllers\StudentClubController::class, 'index'])->name('studentclub');
 Route::get('/student-activity', [Controllers\StudentActivityController::class, 'index'])->name('student-activity');
 
+Route::get('/jobpage', [Controllers\JobPageController::class, 'index'])->name('jobpage');
+Route::get('/jobdetail', [Controllers\JobDetailController::class, 'index'])->name('jobdetail');
+Route::get('/jobregister', [Controllers\JobRegisterController::class, 'index'])->name('jobregister');
+Route::get('/jobapply', [Controllers\JobApplyController::class, 'index'])->name('jobapply');
+
+
+Route::get('/settings', [Controllers\SettingsController::class, 'index'])->name('settings');
+
+
 Route::get('/club-dashboard', [Controllers\ClubDashboardController::class, 'index'])->name('club-dashboard');
 Route::get('/organization-dashboard', [Controllers\OrganizationDashboardController::class, 'index'])->name('organization-dashboard');
 Route::get('/management-dashboard', [Controllers\ManagementDashboardController::class, 'index'])->name('management-dashboard');
