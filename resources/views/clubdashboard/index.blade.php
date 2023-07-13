@@ -85,7 +85,7 @@
             <div class="row">
               <div class="col-md-8">
                 <p class="text-center">
-                  <strong>Sales: 1 Jan, 2014 - 30 Jul, 2014</strong>
+                  <strong>Goals: 1 Jan, 2014 - 30 Jul, 2014</strong>
                 </p>
                 <div class="chart">
                   <canvas id="salesChart" height="180" style="height: 180px;"></canvas>
@@ -96,14 +96,14 @@
                   <strong>Goal Completion</strong>
                 </p>
                 <div class="progress-group">
-                  Add Products to Cart
+                  Events Completed
                   <span class="float-right"><b>160</b>/200</span>
                   <div class="progress progress-sm">
                     <div class="progress-bar bg-primary" style="width: 80%"></div>
                   </div>
                 </div>
                 <div class="progress-group">
-                  Complete Purchase
+                  Target Members
                   <span class="float-right"><b>310</b>/400</span>
                   <div class="progress progress-sm">
                     <div class="progress-bar bg-danger" style="width: 75%"></div>
@@ -117,8 +117,8 @@
                   </div>
                 </div>
                 <div class="progress-group">
-                  Send Inquiries
-                  <span class="float-right"><b>250</b>/500</span>
+                  Visitors
+                  <span class="float-right"><b>2500</b>/5000</span>
                   <div class="progress progress-sm">
                     <div class="progress-bar bg-warning" style="width: 50%"></div>
                   </div>
